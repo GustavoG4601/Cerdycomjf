@@ -1,0 +1,32 @@
+/* src/index.css */
+
+/* Variables globales */
+:root {
+  --azul-cerdycom: #0066cc;
+  --naranja-cerdycom: #ff6600;
+  --blanco: #ffffff;
+}
+
+/* Estilos base */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif !important;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Aplicar Montserrat a todos los elementos */
+* {
+  font-family: 'Montserrat', sans-serif !important;
+  box-sizing: border-box;
+}
+
+/* Si quieres que los títulos tengan más peso */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.6;
+}
