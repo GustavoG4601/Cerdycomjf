@@ -7,7 +7,6 @@ import Allies from "../components/Allies";
 import Footer from "../components/Footer";
 
 // 👇 Importa los efectos
-import FloatingIcons from "../components/FloatingIcons";
 import WhatsAppButton from "../components/WhatsAppButton"; // ✅ nuevo
 
 export default function Home() {
