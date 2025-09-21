@@ -6,8 +6,8 @@ import About from "../components/About";
 import Allies from "../components/Allies";
 import Footer from "../components/Footer";
 
-// 👇 Importa los efectos
-import WhatsAppButton from "../components/WhatsAppButton"; 
+import WhatsAppButton from "../components/WhatsAppButton";
+
 
 export default function Home() {
   return (

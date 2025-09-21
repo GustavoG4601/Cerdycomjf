@@ -5,7 +5,6 @@ import Footer from "../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
-import { FaShieldAlt, FaSatelliteDish, FaSun, FaWifi, FaKey } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Productos() {
