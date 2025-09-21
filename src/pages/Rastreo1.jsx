@@ -7,47 +7,36 @@ import Footer from "../components/Footer";
 export default function Rastreo1() {
   const dispositivos = [
     {
-      nombre: "GPS Vehicular",
-      img: "https://ubik.com.co/cdn/shop/files/WhatsAppImage2024-04-23at2.05.44PM.jpg?v=1713899612&width=1445",
-      descripcion: "Dispositivo de rastreo en tiempo real para vehículos particulares y de carga.",
-      alcance: "Cobertura nacional con chip de datos.",
+      nombre: "Box Track con Control",
+      img: "gps1.webp",
+      descripcion: "GPS vehicular compacto con alarmas y control remoto.",
+      alcance: "Compatible con 2G y 4G. Voltaje de trabajo 9-90V.",
       beneficios: [
-        "Monitoreo en tiempo real desde app o PC",
-        "Historial de recorridos",
-        "Alertas de exceso de velocidad y desconexión"
+        "Alarmas ACC, geocerca y exceso de velocidad",
+        "Memoria en áreas sin señal",
+        "Función de corte de combustible (requiere relé)"
       ],
     },
     {
-      nombre: "GPS Motocicletas",
-      img: "https://cdn.welayer.io/images/YXBpL2ltYWdlL0xvY2FsaXphZG9yLU1vdG8tSW50ZXJwaG9uZS1HUFMtVHJhY2tlci1BbmdlbC0xMFQtLS5qcGc=",
-      descripcion: "Compacto y resistente al agua, ideal para motos.",
-      alcance: "Rastreo preciso con red 4G.",
+      nombre: "GPS EC33 4G/2G",
+      img: "gps2.webp",
+      descripcion: "Rastreador avanzado con soporte a múltiples bandas LTE.",
+      alcance: "Soporta protocolos GT06 y JT808. Voltaje 9-95V.",
       beneficios: [
-        "Instalación oculta",
-        "Notificación en caso de movimiento no autorizado",
-        "Geocercas de seguridad"
+        "Alarmas: vibración, desconexión, exceso de velocidad",
+        "Historial de rutas reproducible",
+        "Ligero y de fácil instalación"
       ],
     },
     {
-      nombre: "GPS Personal",
-      img: "https://hwdb-api.gurtam.com/images/26193054/637f5ab3c8a1a.png",
-      descripcion: "Rastreador portátil para personas, niños o adultos mayores.",
-      alcance: "Batería de larga duración y botón SOS.",
+      nombre: "Plataforma de Rastreo Satelital",
+      img: "gps3.jpg",
+      descripcion: "Sistema profesional de gestión de flotas y rastreo global.",
+      alcance: "Compatible con proveedores telemáticos a nivel mundial.",
       beneficios: [
-        "Ligero y fácil de llevar",
-        "Botón de emergencia con ubicación inmediata",
-        "Ideal para seguridad personal"
-      ],
-    },
-    {
-      nombre: "GPS de Carga Pesada",
-      img: "https://satrack.com/us/wp-content/uploads/sites/5/2023/07/Dispositivo-GPS-para-camiones.png-600x587-1.webp",
-      descripcion: "Rastreo especializado para flotas y transporte pesado.",
-      alcance: "Monitoreo de combustible, rutas y paradas.",
-      beneficios: [
-        "Optimización logística",
-        "Reporte de productividad",
-        "Control total de la flota"
+        "Monitoreo en tiempo real de vehículos y cargas",
+        "Optimización de operaciones logísticas",
+        "Historial de recorridos y reportes avanzados"
       ],
     },
   ];
@@ -67,7 +56,7 @@ export default function Rastreo1() {
     if (!dispositivoSeleccionado) return;
     const numero = "573177374434"; // 👈 tu número en formato internacional sin "+"
     const mensaje = `Hola, quiero más información sobre el ${dispositivoSeleccionado.nombre}`;
-    const url = `https://wa.me/573177374434?text=${encodeURIComponent(mensaje)}`;
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
   };
 
@@ -82,10 +71,10 @@ export default function Rastreo1() {
       >
         <div className="overlay">
           <h1 className="fw-bold text-white text-center display-5">
-            Rastreo Satelital
+            Rastreo Vehicular y Satelital
           </h1>
           <p className="text-light text-center mb-0">
-            Monitorea en tiempo real tus vehículos, motos, cargas y más.
+            Dispositivos GPS y plataformas para el control total de tu flota.
           </p>
         </div>
       </section>
@@ -99,7 +88,7 @@ export default function Rastreo1() {
         <div className="row">
           {dispositivos.map((disp, idx) => (
             <div
-              className="col-md-3 col-sm-6 mb-4"
+              className="col-md-4 col-sm-6 mb-4"
               key={idx}
               onClick={() => handleShow(disp)}
               style={{ cursor: "pointer" }}

@@ -7,47 +7,69 @@ import Footer from "../components/Footer";
 export default function Camara() {
   const camaras = [
     {
-      nombre: "Cámara Bullet HD",
-      img: "1.png",
-      descripcion: "Cámara de alta definición ideal para exteriores.",
-      alcance: "Hasta 50 metros con visión nocturna.",
+      nombre: "Cámara WiFi Exterior Ezviz H8c 1080p",
+      img: "camara 1.webp",
+      descripcion: "Cámara IP 360° para exteriores con resolución Full HD.",
+      alcance: "Visión 360° y almacenamiento en microSD hasta 512GB.",
       beneficios: [
-        "Imagen nítida incluso de noche",
-        "Resistente al agua y polvo (IP66)",
-        "Ideal para perímetros y accesos"
-      ],
-    },
-    {
-      nombre: "Cámara Domo IR",
-      img: "2.png",
-      descripcion: "Diseño compacto para interiores y exteriores.",
-      alcance: "30 metros con infrarrojo.",
-      beneficios: [
-        "Diseño discreto",
-        "Instalación sencilla en techos y paredes",
-        "Visión nocturna automática"
-      ],
-    },
-    {
-      nombre: "Cámara PTZ 360°",
-      img: "3.png",
-      descripcion: "Cámara de movimiento con zoom y rotación total.",
-      alcance: "Zoom óptico de 30x y rotación de 360°.",
-      beneficios: [
-        "Cobertura total en grandes espacios",
-        "Control remoto desde PC o móvil",
-        "Detección y seguimiento automático"
-      ],
-    },
-    {
-      nombre: "Cámara Wi-Fi",
-      img: "4.png",
-      descripcion: "Cámara inalámbrica fácil de instalar.",
-      alcance: "Conectividad Wi-Fi y almacenamiento en la nube.",
-      beneficios: [
-        "Instalación sin cables",
         "Control desde app móvil",
-        "Grabación en tarjeta SD o nube"
+        "Conectividad WiFi fácil de instalar",
+        "Almacenamiento local y en la nube"
+      ],
+    },
+    {
+      nombre: "Cámara Domo 5MP CS-H6C",
+      img: "camara 2.webp",
+      descripcion: "Cámara de vigilancia domo con excelente calidad de imagen.",
+      alcance: "Lente de 4mm con ángulo de visión 82° horizontal.",
+      beneficios: [
+        "Alta resolución de 5MP",
+        "Soporta microSD hasta 512GB",
+        "Red cableada RJ45"
+      ],
+    },
+    {
+      nombre: "Cámara Bala TurboHD 5MP",
+      img: "camara 3.png",
+      descripcion: "Cámara bala con luz blanca integrada para visión a color.",
+      alcance: "Alcance de 40 metros con iluminación LED.",
+      beneficios: [
+        "Resolución 3K (2960x1665)",
+        "Micrófono integrado",
+        "Soporta 4 tecnologías (HD-TVI, HD-CVI, AHD, CVBS)"
+      ],
+    },
+    {
+      nombre: "Cámara Domo PTZ TurboHD 1080P",
+      img: "camara 4.jpg",
+      descripcion: "Cámara PTZ con zoom óptico y visión nocturna de largo alcance.",
+      alcance: "Zoom óptico 15X y visión nocturna hasta 100 metros.",
+      beneficios: [
+        "Resolución Full HD 1080p",
+        "WDR 120dB y reducción de ruido 3D-DNR",
+        "Soporta TVI/AHD/CVI y control por RS-485"
+      ],
+    },
+    {
+      nombre: "DVR 2MP Lite / 8 Canales",
+      img: "grabadora.webp",
+      descripcion: "Grabador de video digital con múltiples tecnologías.",
+      alcance: "4 canales analógicos + 2 IP (6 en total).",
+      beneficios: [
+        "Compatible con Hik-Connect P2P",
+        "Compresión H.265 Pro+",
+        "Soporta HD-TVI, HD-CVI, AHD y CVBS"
+      ],
+    },
+    {
+      nombre: "DVR 2MP Lite / 16 Canales",
+      img: "grabadora 2.png",
+      descripcion: "Grabador de video digital con soporte para hasta 18 canales.",
+      alcance: "16 canales TurboHD + 2 IP.",
+      beneficios: [
+        "Software cliente iVMS-4200",
+        "Soporta DynDNS / NO-IP",
+        "Compresión H.265 Pro+"
       ],
     },
   ];

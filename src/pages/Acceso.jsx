@@ -6,21 +6,60 @@ import Footer from "../components/Footer";
 
 export default function Acceso() {
   const servicios = [
+    // 🚀 Productos reales del catálogo
     {
-      nombre: "Control de acceso peatonal",
-      img: "https://www.dointech.com.co/images/reconocimiento-facial-camara-termica-control-de-acceso.jpg", // 👈 cambia por imagen real
+      nombre: "Terminal de Control de Acceso y Asistencia",
+      img: "terminal.webp",
       descripcion:
-        "Sistemas avanzados de control de acceso peatonal para empresas, conjuntos residenciales y oficinas.",
-      alcance: "Integración con tarjetas, huellas y códigos QR.",
+        "Equipo biométrico con soporte de huellas, tarjetas y registros de eventos.",
+      alcance: "Hasta 1,000 huellas y tarjetas Mifare, 100,000 registros.",
       beneficios: [
-        "Mayor seguridad en accesos",
-        "Control centralizado",
-        "Registro de entradas y salidas",
+        "Pantalla LCD de 2.4”",
+        "Control mediante huella, tarjeta o PIN",
+        "Compatible con TCP/IP",
       ],
     },
     {
+      nombre: "Electroimán 600 lbs con LED",
+      img: "iman.webp",
+      descripcion:
+        "Electroimán de alta seguridad con indicador LED y fuerza de sujeción de 280 kg.",
+      alcance: "Puertas simples y dobles en oficinas, edificios y residencias.",
+      beneficios: [
+        "Incluye magneto, placa y tornillería",
+        "Sensor de puerta NO/NC",
+        "Fácil integración en sistemas de acceso",
+      ],
+    },
+    {
+      nombre: "Cerradura Inteligente WiFi/Bluetooth",
+      img: "iman2.webp",
+      descripcion:
+        "Cerradura electrónica con huella, contraseña, tag o llave mecánica.",
+      alcance: "Hasta 50 huellas, 50 contraseñas y 50 tags.",
+      beneficios: [
+        "Generación de códigos temporales",
+        "Conexión WiFi y Bluetooth (sin hub)",
+        "Botón de timbre integrado",
+      ],
+    },
+    {
+      nombre: "Kit Videoportero Analógico con Pantalla LCD 7”",
+      img: "iaman3.webp",
+      descripcion:
+        "Sistema de videoportero con cámara pinhole y pantalla a color.",
+      alcance: "Cámara 720x576 @30fps, ángulo de visión 98°.",
+      beneficios: [
+        "Protección IP65",
+        "Audio bidireccional integrado",
+        "Salida de relevador para apertura",
+      ],
+    },
+
+    // 🔒 Servicios personalizados que ya tenías (sin duplicar)
+    {
       nombre: "Alarmas contra robo",
-      img: "https://sigmixv.com/wp-content/uploads/Panel-de-alarma-contra-robos-DSC-sigmixv-1024x535.jpg",
+      img: "iman4.webp",
       descripcion:
         "Alarmas inteligentes con sensores de movimiento y notificación inmediata.",
       alcance: "Cobertura total en hogares, negocios y bodegas.",
@@ -32,7 +71,7 @@ export default function Acceso() {
     },
     {
       nombre: "Talanqueras (vehiculares)",
-      img: "https://centropuertas.net/productos/talanqueras-vehiculares/barrera-talanquera-vehicular-axis-450-t.jpg",
+      img: "iman5.jpg",
       descripcion:
         "Talanqueras automáticas para el control de acceso vehicular en parques, empresas y conjuntos.",
       alcance: "Operación 24/7 con bajo mantenimiento.",
@@ -44,7 +83,7 @@ export default function Acceso() {
     },
     {
       nombre: "Concertinas y cerramientos",
-      img: "https://http2.mlstatic.com/D_NQ_NP_651817-MLA75719316132_042024-O.webp",
+      img: "iman6.webp",
       descripcion:
         "Protección física mediante concertinas, mallas y cerramientos perimetrales.",
       alcance: "Soluciones a la medida en diferentes entornos.",
@@ -56,7 +95,7 @@ export default function Acceso() {
     },
     {
       nombre: "Servicios de drones (vigilancia aérea)",
-      img: "https://atyges.es/wp-content/uploads/2022/05/Mini-3-Pro-sp-600x338.png",
+      img: "iman7.jpg",
       descripcion:
         "Monitoreo y vigilancia aérea mediante drones equipados con cámaras de alta resolución.",
       alcance: "Cobertura amplia en terrenos extensos y zonas de difícil acceso.",
@@ -94,7 +133,7 @@ export default function Acceso() {
       {/* Hero con imagen de fondo */}
       <section
         className="hero-acceso"
-        style={{ backgroundImage: "url('Fondo.png')" }} // 👈 cámbiala por tu fondo real
+        style={{ backgroundImage: "url('Fondo.png')" }}
       >
         <div className="overlay">
           <h1 className="fw-bold text-white text-center display-5">
@@ -110,7 +149,7 @@ export default function Acceso() {
       {/* Listado de servicios */}
       <Container className="py-5">
         <h2 className="text-center fw-bold text-success mb-4">
-          Nuestros Servicios
+          Nuestros Servicios y Equipos
         </h2>
 
         <div className="row">

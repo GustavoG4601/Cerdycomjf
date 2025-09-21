@@ -7,6 +7,8 @@ import {
   FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -35,37 +37,45 @@ export default function Footer() {
   <p><FaMapMarkerAlt className="me-2 text-success" /> Cartagena, Colombia</p>
 </Col>
 
+{/* Redes sociales */}
+<Col md={3}>
+  <h5 className="fw-bold mb-3 text-white">Síguenos</h5>
+  <div className="d-flex gap-3 justify-content-center justify-content-md-start">
+    <a 
+      href="https://www.facebook.com/share/1K4E2ZNvN2/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="social-icon"
+    >
+      <FaFacebook />
+    </a>
+    <a 
+      href="https://www.instagram.com/cerdycom?igsh=MWpodjgwbGxpYjUy" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="social-icon"
+    >
+      <FaInstagram />
+    </a>
+    <a 
+      href="https://wa.me/573177374434" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="social-icon"
+    >
+      <FaWhatsapp />
+    </a>
+    <a 
+      href="https://www.linkedin.com/company/cerdycomjf-s-a-s/about/?viewAsMember=true" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="social-icon"
+    >
+      <FaLinkedin />
+    </a>
+  </div>
+</Col>
 
-          {/* Redes sociales */}
-          <Col md={3}>
-            <h5 className="fw-bold mb-3 text-white">Síguenos</h5>
-            <div className="d-flex gap-3 justify-content-center justify-content-md-start">
-              <a 
-                href="https://www.facebook.com/share/1K4E2ZNvN2/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="social-icon"
-              >
-                <FaFacebook />
-              </a>
-              <a 
-                href="https://www.instagram.com/cerdycom?igsh=MWpodjgwbGxpYjUy" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="social-icon"
-              >
-                <FaInstagram />
-              </a>
-              <a 
-                href="https://wa.me/573177374434" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="social-icon"
-              >
-                <FaWhatsapp />
-              </a>
-            </div>
-          </Col>
 
           {/* Descarga nuestra app */}
           <Col md={3}>

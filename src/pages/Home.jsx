@@ -7,15 +7,14 @@ import Allies from "../components/Allies";
 import Footer from "../components/Footer";
 
 // 👇 Importa los efectos
-import FloatingIcons from "../components/FloatingIcons";
-import WhatsAppButton from "../components/WhatsAppButton"; // ✅ nuevo
+import WhatsAppButton from "../components/WhatsAppButton"; 
 
 export default function Home() {
   return (
     <div>
       {/* Video global */}
       <video autoPlay loop muted playsInline className="video-background">
-        <source src="/verde.mp4" type="video/mp4" />
+        <source src="/verde1.mp4" type="video/mp4" />
       </video>
 
     

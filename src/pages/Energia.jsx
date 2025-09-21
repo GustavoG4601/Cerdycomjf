@@ -9,9 +9,39 @@ export default function Energia() {
   const [selected, setSelected] = useState(null);
 
   const energia = [
+    // 🚀 Productos del catálogo
+    {
+      nombre: "Ventilador Solar Portátil con Luz LED",
+      img: "ventilador.webp",
+      descripcion:
+        "Ventilador de emergencia con batería recargable, radio FM y carga solar.",
+      beneficios: [
+        "Ventilador de 8 pulgadas con 2 velocidades",
+        "Batería recargable LiFePO4 3.2V / 5.8Ah",
+        "Incluye radio FM, bocina Bluetooth y lector USB/TF",
+        "16 luces LED nocturnas integradas",
+        "Carga mediante puerto USB-C o panel solar",
+      ],
+    },
+    {
+      nombre: "Kit Solar Portátil con Bombillos",
+      img: "bombillo.webp",
+      descripcion:
+        "Sistema de iluminación solar portátil, ideal para hogares rurales y emergencias.",
+      beneficios: [
+        "Panel solar de 9V 3.5W",
+        "Batería de 6V 4.5Ah",
+        "Incluye 3 bombillos LED de 3W",
+        "Autonomía aproximada de hasta 20 horas",
+        "Carga por panel solar (12-15h) o adaptador de corriente (8-10h)",
+        "Incluye puerto USB para carga de dispositivos",
+      ],
+    },
+
+    // ⚡ Servicios generales de energía solar (los que ya tenías)
     {
       nombre: "Paneles Solares",
-      img: "https://static.vecteezy.com/system/resources/thumbnails/050/835/643/small/solar-panel-isolated-on-transparent-background-cut-out-png.png",
+      img: "panel1.png",
       descripcion:
         "Paneles solares de alta eficiencia para hogares, negocios y proyectos personalizados.",
       beneficios: [
@@ -22,7 +52,7 @@ export default function Energia() {
     },
     {
       nombre: "Parques Solares",
-      img: "https://previews.123rf.com/images/enki/enki1110/enki111000019/10854307-solar-power-plant-isolated-on-white-background.jpg",
+      img: "panel2.jpg",
       descripcion:
         "Soluciones a gran escala con parques solares para empresas, fincas y comunidades.",
       beneficios: [
@@ -33,7 +63,7 @@ export default function Energia() {
     },
     {
       nombre: "Sistemas Solares para Copropiedades",
-      img: "https://b2b.technosun.com/web/image/product.template/14206/image_1024/%5B01V4%5D%201x04%2001V4%20Soporte%20coplanar%20atornillado%2C%20cubierta%20teja%20para%204%20paneles%20%20%3C%202279x1150%20mm%20en%201%20fila%20-%20Serie%20SU?unique=004c422",
+      img: "panel3.jpg",
       descripcion:
         "Energía solar compartida para edificios residenciales, conjuntos y condominios.",
       beneficios: [
@@ -44,7 +74,7 @@ export default function Energia() {
     },
     {
       nombre: "Eficiencia Energética",
-      img: "https://www.kin.energy/PAgina%20KINENERGY%20IMAGENES/Imagenes%20Blog/2021/Blog%202021/Eficiencia-energ%C3%A9tica-y-sus-beneficios-dentro-de-un-proyecto.png",
+      img: "panel4.png",
       descripcion:
         "Estudios y soluciones para optimizar el consumo energético en tu empresa u hogar.",
       beneficios: [
@@ -73,10 +103,10 @@ export default function Energia() {
       >
         <div className="overlay">
           <h1 className="fw-bold text-white text-center display-5">
-            Energía Solar
+            Energía Fotovoltaica
           </h1>
           <p className="text-light text-center mb-0">
-            Soluciones sostenibles para un futuro más limpio
+            Soluciones solares portátiles, residenciales e industriales
           </p>
         </div>
       </section>
@@ -84,12 +114,12 @@ export default function Energia() {
       {/* Listado de Energía */}
       <Container className="py-5">
         <h2 className="text-center fw-bold text-success mb-4">
-          Nuestros Servicios en Energía
+          Nuestros Productos y Servicios en Energía
         </h2>
 
         <div className="row">
           {energia.map((item, idx) => (
-            <div className="col-md-3 col-sm-6 mb-4" key={idx}>
+            <div className="col-md-4 col-sm-6 mb-4" key={idx}>
               <Card
                 className="h-100 shadow-sm energia-card"
                 onClick={() => handleShow(item)}
@@ -99,7 +129,7 @@ export default function Energia() {
                   variant="top"
                   src={item.img}
                   alt={item.nombre}
-                  style={{ height: "200px", objectFit: "cover" }}
+                  style={{ height: "220px", objectFit: "contain" }}
                 />
                 <Card.Body className="text-center">
                   <Card.Title>{item.nombre}</Card.Title>

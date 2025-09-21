@@ -16,6 +16,7 @@ import Rastreo1 from "./pages/Rastreo1";
 import Energia from "./pages/Energia";
 import Internet from "./pages/Internet";
 import Acceso from "./pages/Acceso";
+import Pagos from "./pages/Pagos";
 
 export default function App() {
   return (
@@ -38,6 +39,7 @@ export default function App() {
         <Route path="/Energia" element={<Energia />} />
         <Route path="/internet" element={<Internet />} />
         <Route path="/acceso" element={<Acceso />} />
+        <Route path="/pagos" element={<Pagos />} />
       </Routes>
     </Router>
   );

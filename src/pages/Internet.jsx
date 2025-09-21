@@ -6,9 +6,25 @@ import Footer from "../components/Footer";
 
 export default function Internet() {
   const servicios = [
+    // 🚀 Producto real del catálogo
+    {
+      nombre: "Starlink Estándar",
+      img: "antena1.webp",
+      descripcion:
+        "Antena de matriz de fase electrónica diseñada para ofrecer conectividad de alta velocidad vía satélite.",
+      alcance: "Campo de visión de 110°, IP67, funciona en temperaturas de -30°C a 50°C.",
+      beneficios: [
+        "Consumo energético promedio: 75 - 100 W",
+        "Capacidad para derretir nieve hasta 40 mm/hora",
+        "Resistente a vientos de más de 96 km/h",
+        "Instalación simple y rápida",
+      ],
+    },
+
+    // 🌐 Servicios de conectividad que ya tenías
     {
       nombre: "Antena Internet CerdycomJF",
-      img: "https://m.media-amazon.com/images/I/81HMw4W-V8L.jpg", // 👈 cambia por tus imágenes
+      img: "antena2.webp",
       descripcion:
         "Antena de alto rendimiento diseñada para ofrecer conectividad estable en entornos urbanos y rurales.",
       alcance: "Cobertura amplia con conexión estable.",
@@ -20,7 +36,7 @@ export default function Internet() {
     },
     {
       nombre: "Conexión POE hasta 100mts",
-      img: "https://media.startech.com/cms/products/gallery_large/poeext1gat.main.jpg",
+      img: "antena3.jpg",
       descripcion:
         "Sistema de conexión mediante Power Over Ethernet para largas distancias sin pérdida de señal.",
       alcance: "Alcance garantizado hasta 100 metros.",
@@ -32,7 +48,7 @@ export default function Internet() {
     },
     {
       nombre: "Cobertura en zonas rurales",
-      img: "https://www.internet-satelite.eu/wp-content/uploads/2015/01/wifi-rural1.jpg",
+      img: "antena4.webp",
       descripcion:
         "Tecnología optimizada para ampliar la señal en hogares, negocios y fincas en zonas alejadas.",
       alcance: "Cobertura extendida en áreas rurales.",
@@ -44,7 +60,7 @@ export default function Internet() {
     },
     {
       nombre: "Integración con routers",
-      img: "https://lh3.googleusercontent.com/proxy/UFsq4cjgZs_yYzX2Xqjb93DSX_Mev6uTMBaUlsu9eKQOhipGejms4DHb8-Q8jhq8mX1Zlvk8_u_p1i68pZQWCYSKDfBfejT74SKIY4Y2MgR7xg",
+      img: "antena5.jpg",
       descripcion:
         "Compatibilidad total con routers modernos para garantizar una experiencia de internet sin interrupciones.",
       alcance: "Compatible con cualquier router estándar.",
@@ -71,7 +87,7 @@ export default function Internet() {
     if (!servicioSeleccionado) return;
     const numero = "573177374434"; // 👈 tu número de WhatsApp
     const mensaje = `Hola, quiero más información sobre ${servicioSeleccionado.nombre}`;
-    const url = `https://wa.me/573177374434?text=${encodeURIComponent(mensaje)}`;
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
   };
 
@@ -82,7 +98,7 @@ export default function Internet() {
       {/* Hero con imagen de fondo */}
       <section
         className="hero-internet"
-        style={{ backgroundImage: "url('Fondo.png')" }} // 👈 cámbiala por tu fondo
+        style={{ backgroundImage: "url('Fondo.png')" }}
       >
         <div className="overlay">
           <h1 className="fw-bold text-white text-center display-5">
@@ -97,7 +113,7 @@ export default function Internet() {
       {/* Listado de servicios */}
       <Container className="py-5">
         <h2 className="text-center fw-bold text-success mb-4">
-          Nuestros Servicios
+          Nuestros Servicios y Soluciones
         </h2>
 
         <div className="row">

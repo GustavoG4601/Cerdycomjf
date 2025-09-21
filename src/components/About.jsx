@@ -44,7 +44,7 @@ export default function About() {
               Certificados y avalados por:
             </h5>
             <div className="d-flex flex-wrap gap-4 mt-3 cert-logos">
-              <img src="pol.jpg" alt="MinTIC" height="50" />
+              <img src="pol.png" alt="MinTIC" height="50" />
               <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Logo_del_Ministerio_de_Tecnolog%C3%ADas_de_la_Informaci%C3%B3n_y_las_Comunicaciones_de_Colombia_2022-2026.png" alt="Fedetec" height="50" />
               <img src="https://fedetec.org/wp-content/uploads/2023/02/cropped-Imagotipo_Slogan_Dos_Tintas-1-e1735956926429.png" alt="Google Cloud" height="50" />
               

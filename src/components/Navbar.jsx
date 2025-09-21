@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Navbar, Nav, Container, Button, NavDropdown } from "react-bootstrap";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { useLocation, Link } from "react-router-dom";
 
 export default function NavBarComponent() {
@@ -8,9 +8,22 @@ export default function NavBarComponent() {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      const isMobile = window.innerWidth <= 991;
+      if (isMobile) {
+        setScrolled(true); 
+      } else {
+        setScrolled(window.scrollY > 50); 
+      }
+    };
+
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
 
   const isActive = (path) => location.pathname === path;
@@ -22,20 +35,11 @@ export default function NavBarComponent() {
       className={`custom-navbar ${scrolled ? "scrolled" : ""}`}
     >
       <Container>
-        <Navbar.Brand
-          href="/"
-          className="d-flex align-items-center animate__animated animate__fadeInLeft"
-        >
-          <img
-            src="/logo.png"
-            alt="CerdycomJF"
-            style={{ maxHeight: "45px", marginRight: "10px" }}
-          />
-        </Navbar.Brand>
+        {/* 🔹 Logo eliminado */}
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto align-items-lg-center animate__animated animate__fadeInDown">
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
+          <Nav className="mx-auto d-flex align-items-lg-center animate__animated animate__fadeInDown">
             <Nav.Link
               href="/"
               className={`nav-custom ${isActive("/") ? "active-link" : ""}`}
@@ -89,49 +93,58 @@ export default function NavBarComponent() {
               Nosotros
             </Nav.Link>
 
-            {/* ✅ Ahora los botones e iconos son responsivos */}
-            <div className="extras-wrapper d-flex flex-wrap align-items-center gap-3 mt-3 mt-lg-0">
-              <Button
-                href="http://49.13.219.255/login"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="vehicle-btn pulse"
-              >
-                Dónde está mi vehículo
-              </Button>
-
-              <Button
-                href="https://checkout.bold.co/payment/LNK_TFIM6OAGN8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bill-btn pulse"
-              >
-                Paga aquí tu factura
-              </Button>
-
-              <div className="d-flex align-items-center gap-3">
-                <a
-                  href="https://www.facebook.com/share/1K4E2ZNvN2/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon"
-                  style={{ color: scrolled ? "#1B5E20" : "#ffffff" }}
-                >
-                  <FaFacebook />
-                </a>
-
-                <a
-                  href="https://www.instagram.com/cerdycom?igsh=MWpodjgwbGxpYjUy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon"
-                  style={{ color: scrolled ? "#1B5E20" : "#ffffff" }}
-                >
-                  <FaInstagram />
-                </a>
-              </div>
-            </div>
+            {/* 🔹 Nuevo botón Pagos */}
+            <Nav.Link
+              href="/pagos"
+              className={`nav-custom ${isActive("/pagos") ? "active-link" : ""}`}
+            >
+              Pagos
+            </Nav.Link>
           </Nav>
+
+          {/* 🔹 Botón y redes centrados */}
+          <div className="extras-wrapper d-flex flex-wrap justify-content-center align-items-center gap-3 mt-3 mt-lg-0">
+            <Button
+              href="https://plataformagps.cerdycomjf.com/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="vehicle-btn pulse"
+            >
+              Dónde está mi vehículo
+            </Button>
+
+            <div className="d-flex align-items-center gap-3">
+              <a
+                href="https://www.facebook.com/share/1K4E2ZNvN2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+                style={{ color: scrolled ? "#1B5E20" : "#ffffff" }}
+              >
+                <FaFacebook />
+              </a>
+
+              <a
+                href="https://www.instagram.com/cerdycom?igsh=MWpodjgwbGxpYjUy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+                style={{ color: scrolled ? "#1B5E20" : "#ffffff" }}
+              >
+                <FaInstagram />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/cerdycomjf-s-a-s/about/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+                style={{ color: scrolled ? "#1B5E20" : "#ffffff" }}
+              >
+                <FaLinkedin />
+              </a>
+            </div>
+          </div>
         </Navbar.Collapse>
       </Container>
 
@@ -143,7 +156,7 @@ export default function NavBarComponent() {
         }
         .custom-navbar.scrolled {
           background: #ffffff !important;
-          box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .custom-navbar, 
@@ -193,12 +206,12 @@ export default function NavBarComponent() {
 
         @keyframes pulse {
           0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(27, 94, 32, 0.7); }
-          70% { transform: scale(1.05); box-shadow: 0 0 15px 8px rgba(255, 255, 255, 1); }
-          100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 1); }
+          70% { transform: scale(1.03); box-shadow: 0 0 8px 4px rgba(27, 94, 32, 0.5); }
+          100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(27, 94, 32, 0.7); }
         }
-        .pulse { animation: pulse 5s infinite; }
+        .pulse { animation: pulse 3s infinite; }
 
-        .vehicle-btn, .bill-btn {
+        .vehicle-btn {
           background: linear-gradient(45deg, #1B5E20, #1B5E20);
           border: none;
           font-weight: bold;
@@ -208,7 +221,7 @@ export default function NavBarComponent() {
           transition: all 0.3s ease;
           white-space: nowrap;
         }
-        .vehicle-btn:hover, .bill-btn:hover {
+        .vehicle-btn:hover {
           background: linear-gradient(45deg, #BDBDBD, #2E7D32);
           transform: scale(1.05);
         }
@@ -222,16 +235,20 @@ export default function NavBarComponent() {
           transform: scale(1.2);
         }
 
-        /* ✅ Ajustes responsivos */
         @media (max-width: 991px) {
-          .extras-wrapper {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
+          .custom-navbar {
+            background: #ffffff !important;
           }
-          .vehicle-btn, .bill-btn {
+          .vehicle-btn {
+            background: linear-gradient(45deg, #1B5E20, #1B5E20) !important;
+            color: #fff !important;
             width: 100%;
             text-align: center;
+          }
+          .extras-wrapper {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
           }
           .social-icon {
             font-size: 1.8rem;
