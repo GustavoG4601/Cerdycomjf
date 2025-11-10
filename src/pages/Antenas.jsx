@@ -95,7 +95,7 @@ export default function Antenas() {
           {/* ✅ Botón WhatsApp (lo conservamos tal cual) */}
           <div className="text-center mt-5">
             <a
-              href="https://wa.me/573177374434?text=Hola!%20Quiero%20más%20información%20sobre%20antenas%20e%20internet."
+              href="https://wa.me/573016465632?text=Hola!%20Quiero%20más%20información%20sobre%20antenas%20e%20internet."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-solicita"

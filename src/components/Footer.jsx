@@ -31,7 +31,7 @@ export default function Footer() {
           {/* Contacto */}
 <Col md={3} className="px-4 px-md-5">
   <h5 className="fw-bold mb-3 text-white">Contáctanos</h5>
-  <p><FaPhone className="me-2 text-success" /> +57 3177374434</p>
+  <p><FaPhone className="me-2 text-success" /> +57 3016465632</p>
   <p><FaEnvelope className="me-2 text-success" /> ventas@cerdyconjf.com</p>
   <p><FaMapMarkerAlt className="me-2 text-success" /> Cartagena, Colombia</p>
 </Col>
@@ -57,7 +57,7 @@ export default function Footer() {
       <FaInstagram />
     </a>
     <a 
-      href="https://wa.me/573177374434" 
+      href="https://wa.me/573016465632" 
       target="_blank" 
       rel="noopener noreferrer" 
       className="social-icon"

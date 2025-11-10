@@ -59,23 +59,6 @@ export default function Pagos() {
           </div>
 
           <h2 className="fw-bold text-success mb-4" data-aos="fade-up">
-            Transferencias Bancarias
-          </h2>
-          <ul className="custom-list mb-4">
-            <li data-aos="fade-up">
-              <strong>Banco Davivienda</strong> – Cuenta Corriente N.º 127669998107
-            </li>
-            <li data-aos="fade-up">
-              <strong>Bancolombia</strong> – Cuenta Corriente N.º 85397687380
-            </li>
-            <li data-aos="fade-up">
-              <strong>Corresponsal Bancolombia</strong> – Convenio 47248  
-              <br />
-              <span className="text-muted">Referencia: tu Cédula o NIT</span>
-            </li>
-          </ul>
-
-          <h2 className="fw-bold text-success mb-4" data-aos="fade-up">
             Soporte
           </h2>
           <p data-aos="fade-up">
@@ -83,7 +66,7 @@ export default function Pagos() {
           </p>
           <div className="text-center my-4 d-flex gap-3 justify-content-center" data-aos="zoom-in">
             <a
-              href="https://wa.me/573503778900?text=Hola!%20Necesito%20ayuda%20con%20mi%20pago."
+              href="https://wa.me/573016465632?text=Hola!%20Necesito%20ayuda%20con%20mi%20pago."
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-success btn-lg px-4"
@@ -91,7 +74,7 @@ export default function Pagos() {
               Enviar Soporte
             </a>
             <a
-              href="https://wa.me/573503778900?text=Hola!%20Quiero%20hablar%20con%20un%20asesor."
+              href="https://wa.me/573016465632?text=Hola!%20Quiero%20hablar%20con%20un%20asesor."
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline-success btn-lg px-4"

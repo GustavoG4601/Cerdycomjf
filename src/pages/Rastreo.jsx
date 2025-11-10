@@ -69,7 +69,7 @@ export default function Rastreo() {
           {/* ✅ Botón WhatsApp */}
           <div className="text-center mt-5" data-aos="zoom-in">
             <Button
-              href="https://wa.me/573001234567?text=Hola%20quiero%20información%20sobre%20Rastreo%20Vehicular"
+              href="https://wa.me/573016465632?text=Hola%20quiero%20información%20sobre%20Rastreo%20Vehicular"
               target="_blank"
               rel="noopener noreferrer"
               variant="success"

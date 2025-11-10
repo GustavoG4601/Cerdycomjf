@@ -23,7 +23,7 @@ export default function WhatsAppButton() {
   };
 
   const enviarWhatsApp = (texto) => {
-    const numero = "573177374434";
+    const numero = "573016465632";
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
     window.open(url, "_blank");
   };

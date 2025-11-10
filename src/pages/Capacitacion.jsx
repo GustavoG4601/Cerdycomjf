@@ -89,7 +89,7 @@ export default function Capacitacion() {
           {/* ✅ Botón WhatsApp */}
           <div className="text-center mt-5">
             <a
-              href="https://wa.me/573177374434?text=Hola!%20Quiero%20más%20información%20sobre%20consejería%20y%20servicios%20generales."
+              href="https://wa.me/573016465632?text=Hola!%20Quiero%20más%20información%20sobre%20consejería%20y%20servicios%20generales."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-solicita"

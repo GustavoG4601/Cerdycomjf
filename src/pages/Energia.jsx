@@ -171,7 +171,7 @@ export default function Energia() {
               <Button
                 variant="success"
                 as="a"
-                href={`https://wa.me/573177374434?text=Hola, estoy interesado en ${selected.nombre}`}
+                href={`https://wa.me/573016465632?text=Hola, estoy interesado en ${selected.nombre}`}
                 target="_blank"
               >
                 Solicitar Información

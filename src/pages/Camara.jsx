@@ -87,7 +87,7 @@ export default function Camara() {
   // 👉 Función para enviar WhatsApp
   const enviarWhatsApp = () => {
     if (!camaraSeleccionada) return;
-    const numero = "573177374434"; // 👈 tu número en formato internacional sin "+"
+    const numero = "573016465632"; // 👈 tu número en formato internacional sin "+"
     const mensaje = `Hola, quiero más información sobre la ${camaraSeleccionada.nombre}`;
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");

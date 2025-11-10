@@ -92,7 +92,7 @@ export default function Solar() {
           {/* ✅ Botón WhatsApp */}
           <div className="text-center mt-5" data-aos="zoom-in">
             <a
-              href="https://wa.me/573177374434?text=Hola!%20Quiero%20más%20información%20sobre%20energía%20solar."
+              href="https://wa.me/573016465632?text=Hola!%20Quiero%20más%20información%20sobre%20energía%20solar."
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-success btn-lg px-4"

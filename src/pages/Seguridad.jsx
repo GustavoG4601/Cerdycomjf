@@ -87,7 +87,7 @@ export default function Services1() {
           {/* Botón Solicita Aquí */}
           <div className="text-center mt-5" data-aos="zoom-in">
             <a
-              href="https://wa.me/573177374434?text=Hola!%20Quiero%20más%20información%20sobre%20Seguridad%20Electrónica."
+              href="https://wa.me/573016465632?text=Hola!%20Quiero%20más%20información%20sobre%20Seguridad%20Electrónica."
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-success btn-lg px-4"
