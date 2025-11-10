@@ -85,6 +85,7 @@ export default function Internet() {
   // 👉 WhatsApp
   const enviarWhatsApp = () => {
     if (!servicioSeleccionado) return;
+    const numero = "573177374434"; // 👈 tu número de WhatsApp
     const mensaje = `Hola, quiero más información sobre ${servicioSeleccionado.nombre}`;
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");

@@ -1,19 +1,10 @@
 // src/pages/Rastreo.jsx
-import { useEffect } from "react";
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { Button } from "react-bootstrap";
 
 export default function Rastreo() {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: "ease-out",
-    });
-  }, []);
+
 
   return (
     <div className="rastreo-page">

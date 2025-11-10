@@ -1,15 +1,10 @@
-import { useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom"; // 👈 importamos useNavigate
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function About() {
   const navigate = useNavigate(); // 👈 hook para navegación
 
-  useEffect(() => {
-    AOS.init({ duration: 800, once: true });
-  }, []);
+
 
   return (
     <section id="about" className="about-section py-5 text-light">

@@ -1,18 +1,9 @@
 // src/pages/Services1.jsx
-import { useEffect } from "react";
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function Services1() {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: "ease-out",
-    });
-  }, []);
+
 
   return (
     <div className="services1-page">

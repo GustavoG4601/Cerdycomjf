@@ -1,18 +1,9 @@
 // src/pages/Antenas.jsx
-import { useEffect } from "react";
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function Antenas() {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: "ease-out",
-    });
-  }, []);
+
 
   return (
     <div className="antenas-page">

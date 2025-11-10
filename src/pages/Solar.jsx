@@ -1,18 +1,9 @@
 // src/pages/Solar.jsx
-import { useEffect } from "react";
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function Solar() {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: "ease-out",
-    });
-  }, []);
+
 
   return (
     <div className="solar-page">

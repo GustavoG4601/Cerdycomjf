@@ -1,15 +1,10 @@
 // src/pages/Nosotros.jsx
-import { useEffect } from "react";
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { Card } from "react-bootstrap";
 
 export default function Nosotros() {
-  useEffect(() => {
-    AOS.init({ duration: 800, once: true, easing: "ease-out" });
-  }, []);
+
 
   return (
     <div className="nosotros-page bg-light">

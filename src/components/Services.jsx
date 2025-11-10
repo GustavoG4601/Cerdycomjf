@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import {
   FaShieldAlt,
@@ -6,13 +5,9 @@ import {
   FaSolarPanel,
   FaUsers,
 } from "react-icons/fa";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function Services() {
-  useEffect(() => {
-    AOS.init({ duration: 700, once: true });
-  }, []);
+
 
   const services = [
     {

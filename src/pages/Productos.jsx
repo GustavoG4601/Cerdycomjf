@@ -1,16 +1,13 @@
 // src/pages/Productos.jsx
-import { useEffect } from "react";
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { FaShieldAlt, FaSun } from "react-icons/fa"; // 👈 AÑADE ESTA LÍNEA
+
 
 export default function Productos() {
-  useEffect(() => {
-    AOS.init({ duration: 550, once: true, easing: "ease-out" });
-  }, []);
+
 
   // Categorías con iconos e imágenes/videos
   const categorias = [

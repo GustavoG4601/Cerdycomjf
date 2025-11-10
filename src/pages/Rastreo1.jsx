@@ -54,6 +54,7 @@ export default function Rastreo1() {
   // 👉 WhatsApp
   const enviarWhatsApp = () => {
     if (!dispositivoSeleccionado) return;
+    const numero = "573177374434";
     const mensaje = `Hola, quiero más información sobre el ${dispositivoSeleccionado.nombre}`;
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");

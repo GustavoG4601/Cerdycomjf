@@ -1,17 +1,10 @@
-import { useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { FaCar, FaVideo, FaWifi, FaLock } from "react-icons/fa";
 import { MdSecurity } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 export default function Products() {
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    AOS.init({ duration: 700, once: true }); // Animaciones rápidas
-  }, []);
 
   const items = [
     {
@@ -52,18 +45,6 @@ export default function Products() {
     },
   ];
 
-  // 👇 función para redirigir al mismo Products con hash
-  const goToSection = (id) => {
-    navigate(`/productos#${id}`);
-    // Forzar el scroll al elemento
-    setTimeout(() => {
-      const section = document.getElementById(id);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }, 100);
-  };
-
   return (
     <section id="products" className="py-5 position-relative">
       <Container>
@@ -96,14 +77,15 @@ export default function Products() {
                       <Card.Title className="overlay-text">
                         {item.title}
                       </Card.Title>
-                      <Button
-                        size="sm"
-                        variant="light"
-                        className="overlay-btn"
-                        onClick={() => goToSection(item.id)} // 👈 redirige
-                      >
-                        Más información
-                      </Button>
+                      <Link to="/productos">
+                        <Button
+                          size="sm"
+                          variant="light"
+                          className="overlay-btn"
+                        >
+                          Más información
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>
