@@ -27,7 +27,7 @@ export default function Hero() {
       <Container style={{ zIndex: 2 }}>
         {/* Logo animado */}
         <img
-          src="/logo.png"
+          src="/media/ui/logo.webp"
           alt="CerdycomJF"
           className="hero-logo animate__animated animate__fadeInDown"
         />
@@ -45,14 +45,14 @@ export default function Hero() {
 
         {/* Botones CTA */}
         <div className="d-flex gap-3 justify-content-center">
-          <Button 
+          <Button
             className="hero-btn-primary"
             onClick={() => navigate("/services1/Seguridad")} // 👈 redirige a servicios
           >
             Nuestros Servicios
           </Button>
 
-          <Button 
+          <Button
             className="hero-btn-outline"
             onClick={() => navigate("/productos")} // 👈 redirige a productos
           >

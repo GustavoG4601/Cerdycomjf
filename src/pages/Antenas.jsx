@@ -1,202 +1,274 @@
-// src/pages/Antenas.jsx
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { FaSatelliteDish, FaWifi, FaSignal, FaNetworkWired, FaWhatsapp, FaCheckCircle, FaProjectDiagram, FaGlobeAmericas } from "react-icons/fa";
 
 export default function Antenas() {
+  const benefits = [
+    {
+      icon: <FaProjectDiagram />,
+      title: "Enlaces P2P",
+      desc: "Conexiones inalámbricas de largo alcance para unir sedes, fincas o campus remotos."
+    },
+    {
+      icon: <FaWifi />,
+      title: "Wi-Fi Profesional",
+      desc: "Distribución inteligente (Mesh) para una cobertura total sin puntos ciegos en tu empresa."
+    },
+    {
+      icon: <FaSignal />,
+      title: "Zonas Rurales",
+      desc: "Llevamos internet donde otros no llegan con antenas de alto rendimiento y tecnología LTE."
+    },
+    {
+      icon: <FaNetworkWired />,
+      title: "Redes Robustas",
+      desc: "Cableado estructurado y gestión de tráfico para garantizar estabilidad y baja latencia."
+    }
+  ];
 
+  const commitments = [
+    "Cobertura y estabilidad verificables en sitio.",
+    "Equipos de marcas líderes a nivel mundial.",
+    "Soporte técnico y mantenimiento preventivo.",
+    "Soluciones escalables y 100% seguras."
+  ];
 
   return (
     <div className="antenas-page">
       <NavbarComponent />
 
-      {/* HERO Antenas e Internet */}
-      <section
-        className="hero-antenas"
-        style={{
-          backgroundImage: "url('/Fondo.png')",
-        }}
-      >
-        <div className="overlay">
-          <div
-            className="hero-content text-center text-white px-3"
-            style={{ maxWidth: "700px" }}
-          >
-            <h1
-              className="fw-bold mb-4 display-4"
-              data-aos="fade-up"
-              data-aos-delay="0"
-            >
-              Antenas e <span className="highlight">Internet</span>
-            </h1>
-            <p className="lead" data-aos="fade-up" data-aos-delay="300">
-              En <strong>CERDYCOM JF</strong> conectamos hogares, empresas y
-              proyectos en zonas urbanas y rurales con enlaces estables, seguros
-              y de alto rendimiento. Diseñamos, instalamos y administramos
-              soluciones inalámbricas que te mantienen en línea sin
-              interrupciones.
-            </p>
-          </div>
+      {/* 🚀 Hero Section */}
+      <section className="hero-detail">
+        <div className="hero-overlay-glass">
+          <Container>
+            <div className="hero-text-wrapper text-center">
+              <h6 className="badge-premium mb-3" data-aos="fade-down">CONECTIVIDAD AVANZADA</h6>
+              <h1 className="display-4 fw-bold text-white mb-4" data-aos="fade-up">
+                Internet sin <span>Fronteras</span>
+              </h1>
+              <p className="hero-desc text-white-50 mx-auto" data-aos="fade-up" data-aos-delay="200" style={{ maxWidth: "800px" }}>
+                En <strong>CERDYCOM JF</strong> eliminamos las barreras de comunicación. Enlaces de alto rendimiento para que nunca dejes de estar conectado.
+              </p>
+            </div>
+          </Container>
         </div>
       </section>
 
-      {/* CONTENIDO */}
-      <section className="py-5 bg-light">
-        <div className="container">
-          <h2 className="fw-bold text-success mb-4" data-aos="fade-up">
-            ¿Cómo brindamos tranquilidad y conectividad?
-          </h2>
-          <ul className="custom-list mb-4">
-            <li data-aos="fade-up">
-              Enlaces inalámbricos <strong>punto a punto</strong> y{" "}
-              <strong>punto a multipunto</strong> para campus, fincas y sedes
-              remotas.
-            </li>
-            <li data-aos="fade-up">
-              Distribución <strong>Wi-Fi profesional</strong> (mesh, roaming,
-              control de ancho de banda y QoS) para hogares, oficinas y
-              comercios.
-            </li>
-            <li data-aos="fade-up">
-              Soluciones para <strong>zonas rurales</strong>, repetidores{" "}
-              <strong>LTE/5G</strong> y antenas de alto alcance.
-            </li>
-            <li data-aos="fade-up">
-              Rediseño e instalación de redes:{" "}
-              <strong>cableado estructurado</strong>, switches <strong>PoE</strong>, UPS
-              y segmentación.
-            </li>
-            <li data-aos="fade-up">
-              <strong>Monitoreo y gestión remota</strong> con alertas para
-              asegurar disponibilidad 24/7.
-            </li>
-          </ul>
-
-          <h2 className="fw-bold text-success mb-4" data-aos="fade-up">
-            Nuestro compromiso
-          </h2>
-          <ul className="custom-checklist text-success fw-semibold">
-            <li data-aos="fade-up">
-              <strong>Cobertura, estabilidad y baja latencia</strong> verificables con
-              pruebas de sitio.
-            </li>
-            <li data-aos="fade-up">
-              Equipos de <strong>marcas líderes</strong> configurados por técnicos
-              certificados.
-            </li>
-            <li data-aos="fade-up">
-              <strong>Soporte permanente</strong>, SLA y mantenimiento preventivo.
-            </li>
-            <li data-aos="fade-up">
-              Soluciones <strong>escalables y seguras</strong> (encriptación, VLAN,
-              firewalls y control de invitados).
-            </li>
-          </ul>
-
-          {/* ✅ Botón WhatsApp (lo conservamos tal cual) */}
-          <div className="text-center mt-5">
-            <a
-              href="https://wa.me/573016465632?text=Hola!%20Quiero%20más%20información%20sobre%20antenas%20e%20internet."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-solicita"
-              data-aos="zoom-in"
-            >
-              Solicítalo Aquí
-            </a>
+      {/* 🛠 Solutions Section */}
+      <section className="solutions-section py-5">
+        <div className="bg-glow-right"></div>
+        <Container className="py-lg-5">
+          <div className="text-center mb-5 pb-3">
+            <h2 className="section-title text-white fw-bold h1" data-aos="fade-up">
+              Soluciones de <span>Enlace</span>
+            </h2>
+            <div className="divider-glow mx-auto"></div>
           </div>
-        </div>
+
+          <Row className="g-4">
+            {benefits.map((item, idx) => (
+              <Col lg={3} md={6} key={idx} data-aos="fade-up" data-aos-delay={idx * 100}>
+                <Card className="glass-benefit-card h-100">
+                  <div className="benefit-icon-box">{item.icon}</div>
+                  <Card.Body className="p-0">
+                    <h5 className="text-white fw-bold mb-3">{item.title}</h5>
+                    <p className="text-white-50 mb-0 small">{item.desc}</p>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+
+          <Row className="align-items-center g-5 mt-5">
+            <Col lg={6} data-aos="fade-right">
+              <div className="commitment-card p-4">
+                <h3 className="text-white fw-bold mb-4 h2">Tu Mundo <span>Conectado</span></h3>
+                <div className="commitment-list">
+                  {commitments.map((text, i) => (
+                    <div className="commitment-item" key={i}>
+                      <FaCheckCircle className="check-icon" />
+                      <span>{text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Col>
+            <Col lg={6} data-aos="fade-left">
+              <div className="cta-box-glass p-5 text-center">
+                <FaGlobeAmericas className="cta-icon mb-4" />
+                <h4 className="text-white fw-bold mb-3">¿Tienes problemas de señal?</h4>
+                <p className="text-white-50 mb-4">Realizamos estudios de campo para garantizar la mejor conexión en tu zona.</p>
+                <Button
+                  href="https://wa.me/573016465632?text=Hola!%20Quiero%20información%20sobre%20Antenas%20e%20Internet."
+                  target="_blank"
+                  className="whatsapp-btn-modern glow-pulse"
+                >
+                  <FaWhatsapp className="me-2" /> Solicitar Estudio de Sitio
+                </Button>
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </section>
 
       <Footer />
 
       <style>{`
-        .hero-antenas {
+        .antenas-page {
+          background: url('/media/ui/Fondo.webp') center/cover no-repeat fixed;
+          color: #fff;
+          min-height: 100vh;
+        }
+
+        .hero-detail {
           position: relative;
-          background-size: cover;
-          background-position: center;
-          min-height: 70vh;
+          min-height: 60vh;
           display: flex;
           align-items: center;
-          justify-content: center;
         }
-        .hero-antenas .overlay {
-          background: rgba(0,0,0,0.55);
+
+        .hero-overlay-glass {
           width: 100%;
-          height: 100%;
+          min-height: 60vh;
           display: flex;
           align-items: center;
-          justify-content: center;
-          text-align: center;
-        }
-        .hero-content {
-          max-width: 800px;
+          background: linear-gradient(0deg, rgba(5, 5, 5, 0.7) 0%, rgba(5, 5, 5, 0.3) 100%);
         }
 
-        /* Título principal (igual a Services1.jsx) */
-        .hero-content h1 {
-          font-size: 3.5rem;
-          line-height: 1.2;
-          text-shadow: 0 4px 16px rgba(0,0,0,0.6);
-        }
-        .hero-content .highlight {
-          color: #28a745; /* Verde */
-          text-shadow: 0 0 12px rgba(40,167,69,0.7);
-        }
-
-        h2 {
-          border-left: 5px solid #28a745;
-          padding-left: 15px;
-        }
-        .custom-list {
-          list-style: none;
-          padding-left: 0;
-        }
-        .custom-list li {
+        .hero-text-wrapper {
           position: relative;
-          padding-left: 25px;
-          margin-bottom: 12px;
-          font-size: 1rem;
-        }
-        .custom-list li::before {
-          content: "◈";
-          position: absolute;
-          left: 0;
-          color: #28a745;
-          font-size: 0.9rem;
-        }
-        .custom-checklist {
-          list-style: none;
-          padding-left: 0;
-        }
-        .custom-checklist li {
-          position: relative;
-          padding-left: 28px;
-          margin-bottom: 12px;
-          font-size: 1rem;
-        }
-        .custom-checklist li::before {
-          content: "✔";
-          position: absolute;
-          left: 0;
-          color: #28a745;
-          font-weight: bold;
+          z-index: 3;
+          width: 100%;
         }
 
-        /* Botón personalizado (lo dejamos igual que tenías) */
-        .btn-solicita {
+        .badge-premium {
           display: inline-block;
-          background: #186e2c;
-          color: white;
-          padding: 12px 25px;
-          border-radius: 8px;
-          font-weight: bold;
-          font-size: 1.1rem;
-          text-decoration: none;
-          transition: all 0.3s ease;
+          background: rgba(76, 175, 80, 0.1);
+          color: #4CAF50;
+          padding: 8px 20px;
+          border-radius: 50px;
+          font-weight: 800;
+          font-size: 0.7rem;
+          letter-spacing: 2px;
+          border: 1px solid rgba(76, 175, 80, 0.2);
         }
-        .btn-solicita:hover {
-          background: #28a745;
-          transform: scale(1.05);
+
+        .hero-detail h1 span {
+          background: linear-gradient(90deg, #4CAF50, #81C784);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+          font-size: 1.2rem;
+          line-height: 1.6;
+        }
+
+        .solutions-section {
+          position: relative;
+          background: linear-gradient(180deg, rgba(10, 10, 10, 0.6) 0%, rgba(5, 5, 5, 0.4) 100%);
+          backdrop-filter: blur(15px);
+        }
+
+        .bg-glow-right {
+          position: absolute;
+          top: -100px;
+          right: -50px;
+          width: 400px;
+          height: 400px;
+          background: radial-gradient(circle, rgba(76, 175, 80, 0.08) 0%, transparent 70%);
+          pointer-events: none;
+        }
+
+        .section-title span { color: #4CAF50; }
+
+        .divider-glow {
+          width: 60px;
+          height: 4px;
+          background: #4CAF50;
+          border-radius: 10px;
+          margin-top: 15px;
+          box-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
+        }
+
+        .glass-benefit-card {
+          background: rgba(255, 255, 255, 0.03) !important;
+          border: 1px solid rgba(255, 255, 255, 0.08) !important;
+          border-radius: 20px !important;
+          transition: all 0.4s ease;
+          padding: 30px 25px;
+          backdrop-filter: blur(10px);
+        }
+
+        .glass-benefit-card:hover {
+          transform: translateY(-10px);
+          background: rgba(255, 255, 255, 0.08) !important;
+          border-color: rgba(76, 175, 80, 0.5) !important;
+          box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .benefit-icon-box {
+          font-size: 2.5rem;
+          color: #4CAF50;
+          margin-bottom: 20px;
+          transition: 0.3s;
+        }
+
+        .glass-benefit-card:hover .benefit-icon-box { transform: scale(1.1) rotate(5deg); }
+
+        .commitment-card h3 span { color: #4CAF50; }
+        .commitment-list { display: grid; gap: 18px; }
+        .commitment-item {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          font-size: 1.1rem;
+          color: rgba(255, 255, 255, 0.85);
+        }
+        .check-icon { color: #4CAF50; font-size: 1.3rem; flex-shrink: 0; }
+
+        .cta-box-glass {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 30px;
+          backdrop-filter: blur(10px);
+        }
+
+        .cta-icon { font-size: 3.5rem; color: #4CAF50; }
+
+        .whatsapp-btn-modern {
+          background: #25D366;
+          border: none;
+          padding: 16px 40px;
+          border-radius: 50px;
+          font-weight: 800;
+          font-size: 1.1rem;
+          color: #fff !important;
+          transition: all 0.3s ease;
+          display: inline-flex;
+          align-items: center;
+        }
+        .whatsapp-btn-modern:hover {
+          background: #128C7E;
+          transform: translateY(-3px) scale(1.02);
+          box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .glow-pulse {
+          animation: btnPulse 3s infinite;
+        }
+        @keyframes btnPulse {
+          0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+          70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        @media (max-width: 991px) {
+          .hero-detail { min-height: 50vh; }
+          .hero-overlay-glass { min-height: 50vh; }
+          .hero-detail h1 { font-size: 2.8rem; }
+          .cta-box-glass { padding: 40px 20px !important; }
         }
       `}</style>
     </div>

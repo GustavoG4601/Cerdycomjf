@@ -1,188 +1,274 @@
-// src/pages/Capacitacion.jsx
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { FaUserTie, FaBroom, FaSeedling, FaSwimmingPool, FaWhatsapp, FaCheckCircle, FaBuilding, FaHandsHelping } from "react-icons/fa";
 
 export default function Capacitacion() {
+  const benefits = [
+    {
+      icon: <FaUserTie />,
+      title: "Consejería",
+      desc: "Personal idóneo para porterías y control de acceso con enfoque administrativo y servicial."
+    },
+    {
+      icon: <FaBroom />,
+      title: "Mantenimiento",
+      desc: "Limpieza profunda y desinfección profesional en oficinas, bodegas y conjuntos residenciales."
+    },
+    {
+      icon: <FaSeedling />,
+      title: "Jardinería",
+      desc: "Cuidado experto de zonas verdes, poda de prados y mantenimiento de paisajes naturales."
+    },
+    {
+      icon: <FaSwimmingPool />,
+      title: "Zonas Húmedas",
+      desc: "Mantenimiento integral de piscinas y fuentes ornamentales con asesoría técnica especializada."
+    }
+  ];
 
+  const commitments = [
+    "Personal altamente capacitado y comprometido.",
+    "Cumplimiento estricto de protocolos de higiene.",
+    "Asesoría constante para optimizar la calidad.",
+    "Soluciones adaptadas a cada tipo de cliente."
+  ];
 
   return (
     <div className="capacitacion-page">
       <NavbarComponent />
 
-      {/* HERO Consejería y Servicios Generales */}
-      <section
-        className="hero-capacitacion"
-        style={{
-          backgroundImage: "url('/Fondo.png')", // imagen en /public
-        }}
-      >
-        <div className="overlay">
-          <div
-            className="hero-content text-center text-white px-3"
-            style={{ maxWidth: "700px" }}
-          >
-            <h1
-              className="fw-bold mb-4 display-4"
-              data-aos="fade-up"
-            >
-              Consejería y <span className="highlight">Servicios Generales</span>
-            </h1>
-            <p
-              className="lead"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              En <strong>CERDYCOM JF</strong> ofrecemos personal idóneo y
-              capacitado en consejería, servicios generales y mantenimiento,
-              garantizando orden, limpieza y apoyo integral en empresas,
-              conjuntos residenciales e instituciones.
-            </p>
-          </div>
+      {/* 🚀 Hero Section */}
+      <section className="hero-detail">
+        <div className="hero-overlay-glass">
+          <Container>
+            <div className="hero-text-wrapper text-center">
+              <h6 className="badge-premium mb-3" data-aos="fade-down">SOLUCIONES INTEGRALES</h6>
+              <h1 className="display-4 fw-bold text-white mb-4" data-aos="fade-up">
+                Servicios con <span>Excelencia</span>
+              </h1>
+              <p className="hero-desc text-white-50 mx-auto" data-aos="fade-up" data-aos-delay="200" style={{ maxWidth: "800px" }}>
+                En <strong>CERDYCOM JF</strong> brindamos el apoyo humano y técnico que tu empresa requiere. Orden, limpieza y administración profesional.
+              </p>
+            </div>
+          </Container>
         </div>
       </section>
 
-      {/* CONTENIDO */}
-      <section className="py-5 bg-light">
-        <div className="container">
-          <h2 className="fw-bold text-success mb-4" data-aos="fade-up">
-            Nuestros Servicios
-          </h2>
-          <ul className="custom-list mb-4">
-            <li data-aos="fade-up">
-              Consejería y manejo integral de portería en lugares que no requieren
-              seguridad armada, con un enfoque administrativo y de servicio.
-            </li>
-            <li data-aos="fade-up">
-              Aseo general en oficinas, hospitales, plantas industriales, casas,
-              almacenes, centros comerciales, locales, bodegas y conjuntos.
-            </li>
-            <li data-aos="fade-up">
-              Jardinería básica: corte de prados, setos, uso de podadoras y
-              guadañadoras, entre otros.
-            </li>
-            <li data-aos="fade-up">
-              Mantenimiento de aguas en piscinas y fuentes ornamentales con
-              asesoría técnica y mecánica especializada.
-            </li>
-            <li data-aos="fade-up">
-              Manejo integral de zonas comunes en empresas y conjuntos
-              residenciales (pisos, jardines y sistemas de agua).
-            </li>
-          </ul>
-
-          <h2 className="fw-bold text-success mb-4" data-aos="fade-up">
-            Compromiso CERDYCOM JF
-          </h2>
-          <ul className="custom-checklist text-success fw-semibold">
-            <li data-aos="fade-up">Personal altamente capacitado y comprometido.</li>
-            <li data-aos="fade-up">
-              Cumplimiento estricto de protocolos de higiene y seguridad.
-            </li>
-            <li data-aos="fade-up">
-              Asesoría constante para optimizar la calidad de los servicios.
-            </li>
-            <li data-aos="fade-up">
-              Adaptación de soluciones a las necesidades de cada cliente.
-            </li>
-          </ul>
-
-          {/* ✅ Botón WhatsApp */}
-          <div className="text-center mt-5">
-            <a
-              href="https://wa.me/573016465632?text=Hola!%20Quiero%20más%20información%20sobre%20consejería%20y%20servicios%20generales."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-solicita"
-              data-aos="zoom-in"
-            >
-              Solicítalo Aquí
-            </a>
+      {/* 🛠 Solutions Section */}
+      <section className="solutions-section py-5">
+        <div className="bg-glow-right"></div>
+        <Container className="py-lg-5">
+          <div className="text-center mb-5 pb-3">
+            <h2 className="section-title text-white fw-bold h1" data-aos="fade-up">
+              Apoyo de <span>Confianza</span>
+            </h2>
+            <div className="divider-glow mx-auto"></div>
           </div>
-        </div>
+
+          <Row className="g-4">
+            {benefits.map((item, idx) => (
+              <Col lg={3} md={6} key={idx} data-aos="fade-up" data-aos-delay={idx * 100}>
+                <Card className="glass-benefit-card h-100">
+                  <div className="benefit-icon-box">{item.icon}</div>
+                  <Card.Body className="p-0">
+                    <h5 className="text-white fw-bold mb-3">{item.title}</h5>
+                    <p className="text-white-50 mb-0 small">{item.desc}</p>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+
+          <Row className="align-items-center g-5 mt-5">
+            <Col lg={6} data-aos="fade-right">
+              <div className="commitment-card p-4">
+                <h3 className="text-white fw-bold mb-4 h2">Calidad <span>Certificada</span></h3>
+                <div className="commitment-list">
+                  {commitments.map((text, i) => (
+                    <div className="commitment-item" key={i}>
+                      <FaCheckCircle className="check-icon" />
+                      <span>{text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Col>
+            <Col lg={6} data-aos="fade-left">
+              <div className="cta-box-glass p-5 text-center">
+                <FaHandsHelping className="cta-icon mb-4" />
+                <h4 className="text-white fw-bold mb-3">¿Buscas personal capacitado?</h4>
+                <p className="text-white-50 mb-4">Proveemos soluciones de outsourcing eficientes para que tú te enfoques en tu negocio.</p>
+                <Button
+                  href="https://wa.me/573016465632?text=Hola!%20Quiero%20información%20sobre%20Consejería%20y%20Servicios%20Generales."
+                  target="_blank"
+                  className="whatsapp-btn-modern glow-pulse"
+                >
+                  <FaWhatsapp className="me-2" /> Solicitar Personal Ahora
+                </Button>
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </section>
 
       <Footer />
 
       <style>{`
-        .hero-capacitacion {
+        .capacitacion-page {
+          background: url('/media/ui/Fondo.webp') center/cover no-repeat fixed;
+          color: #fff;
+          min-height: 100vh;
+        }
+
+        .hero-detail {
           position: relative;
-          background-size: cover;
-          background-position: center;
-          min-height: 70vh;
+          min-height: 60vh;
           display: flex;
           align-items: center;
-          justify-content: center;
         }
-        .hero-capacitacion .overlay {
-          background: rgba(0,0,0,0.55);
+
+        .hero-overlay-glass {
           width: 100%;
-          height: 100%;
+          min-height: 60vh;
           display: flex;
           align-items: center;
-          justify-content: center;
-          text-align: center;
+          background: linear-gradient(0deg, rgba(5, 5, 5, 0.7) 0%, rgba(5, 5, 5, 0.3) 100%);
         }
-        .hero-content h1 {
-          font-size: 3.5rem;
-          line-height: 1.2;
-          text-shadow: 0 4px 16px rgba(0,0,0,0.6);
-        }
-        .hero-content .highlight {
-          color: #28a745;
-          text-shadow: 0 0 12px rgba(40,167,69,0.7);
-        }
-        h2 {
-          border-left: 5px solid #28a745;
-          padding-left: 15px;
-        }
-        .custom-list {
-          list-style: none;
-          padding-left: 0;
-        }
-        .custom-list li {
+
+        .hero-text-wrapper {
           position: relative;
-          padding-left: 25px;
-          margin-bottom: 12px;
-          font-size: 1rem;
+          z-index: 3;
+          width: 100%;
         }
-        .custom-list li::before {
-          content: "◈";
-          position: absolute;
-          left: 0;
-          color: #28a745;
-          font-size: 0.9rem;
-        }
-        .custom-checklist {
-          list-style: none;
-          padding-left: 0;
-        }
-        .custom-checklist li {
-          position: relative;
-          padding-left: 28px;
-          margin-bottom: 12px;
-          font-size: 1rem;
-        }
-        .custom-checklist li::before {
-          content: "✔";
-          position: absolute;
-          left: 0;
-          color: #28a745;
-          font-weight: bold;
-        }
-        .btn-solicita {
+
+        .badge-premium {
           display: inline-block;
-          background: #186e2c;
-          color: white;
-          padding: 12px 25px;
-          border-radius: 8px;
-          font-weight: bold;
-          font-size: 1.1rem;
-          text-decoration: none;
-          transition: all 0.3s ease;
+          background: rgba(76, 175, 80, 0.1);
+          color: #4CAF50;
+          padding: 8px 20px;
+          border-radius: 50px;
+          font-weight: 800;
+          font-size: 0.7rem;
+          letter-spacing: 2px;
+          border: 1px solid rgba(76, 175, 80, 0.2);
         }
-        .btn-solicita:hover {
-          background: #28a745;
-          transform: scale(1.05);
+
+        .hero-detail h1 span {
+          background: linear-gradient(90deg, #4CAF50, #81C784);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+          font-size: 1.2rem;
+          line-height: 1.6;
+        }
+
+        .solutions-section {
+          position: relative;
+          background: linear-gradient(180deg, rgba(10, 10, 10, 0.6) 0%, rgba(5, 5, 5, 0.4) 100%);
+          backdrop-filter: blur(15px);
+        }
+
+        .bg-glow-right {
+          position: absolute;
+          top: -100px;
+          right: -50px;
+          width: 400px;
+          height: 400px;
+          background: radial-gradient(circle, rgba(76, 175, 80, 0.08) 0%, transparent 70%);
+          pointer-events: none;
+        }
+
+        .section-title span { color: #4CAF50; }
+
+        .divider-glow {
+          width: 60px;
+          height: 4px;
+          background: #4CAF50;
+          border-radius: 10px;
+          margin-top: 15px;
+          box-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
+        }
+
+        .glass-benefit-card {
+          background: rgba(255, 255, 255, 0.03) !important;
+          border: 1px solid rgba(255, 255, 255, 0.08) !important;
+          border-radius: 20px !important;
+          transition: all 0.4s ease;
+          padding: 30px 25px;
+          backdrop-filter: blur(10px);
+        }
+
+        .glass-benefit-card:hover {
+          transform: translateY(-10px);
+          background: rgba(255, 255, 255, 0.08) !important;
+          border-color: rgba(76, 175, 80, 0.5) !important;
+          box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .benefit-icon-box {
+          font-size: 2.5rem;
+          color: #4CAF50;
+          margin-bottom: 20px;
+          transition: 0.3s;
+        }
+
+        .glass-benefit-card:hover .benefit-icon-box { transform: scale(1.1) rotate(5deg); }
+
+        .commitment-card h3 span { color: #4CAF50; }
+        .commitment-list { display: grid; gap: 18px; }
+        .commitment-item {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          font-size: 1.1rem;
+          color: rgba(255, 255, 255, 0.85);
+        }
+        .check-icon { color: #4CAF50; font-size: 1.3rem; flex-shrink: 0; }
+
+        .cta-box-glass {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 30px;
+          backdrop-filter: blur(10px);
+        }
+
+        .cta-icon { font-size: 3.5rem; color: #4CAF50; }
+
+        .whatsapp-btn-modern {
+          background: #25D366;
+          border: none;
+          padding: 16px 40px;
+          border-radius: 50px;
+          font-weight: 800;
+          font-size: 1.1rem;
+          color: #fff !important;
+          transition: all 0.3s ease;
+          display: inline-flex;
+          align-items: center;
+        }
+        .whatsapp-btn-modern:hover {
+          background: #128C7E;
+          transform: translateY(-3px) scale(1.02);
+          box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .glow-pulse {
+          animation: btnPulse 3s infinite;
+        }
+        @keyframes btnPulse {
+          0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+          70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        @media (max-width: 991px) {
+          .hero-detail { min-height: 50vh; }
+          .hero-overlay-glass { min-height: 50vh; }
+          .hero-detail h1 { font-size: 2.8rem; }
+          .cta-box-glass { padding: 40px 20px !important; }
         }
       `}</style>
     </div>

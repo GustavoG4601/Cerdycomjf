@@ -1,262 +1,305 @@
-// src/pages/Productos.jsx
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FaShieldAlt, FaSun } from "react-icons/fa"; // 👈 AÑADE ESTA LÍNEA
-
+import { FaShieldAlt, FaSun, FaArrowRight, FaVideo, FaCogs, FaSignal, FaLock } from "react-icons/fa";
 
 export default function Productos() {
-
-
-  // Categorías con iconos e imágenes/videos
   const categorias = [
     {
       titulo: "Cámaras de Seguridad",
-      img: "/camara.mp4",
-      link: "/Camara", // 👈 ruta a la nueva página
-      icon: <FaShieldAlt size={20} className="text-success me-2" />,
-      tipo: "router", // 👈 este lo usamos para diferenciar
+      desc: "Vigilancia de alta definición con visión nocturna y detección inteligente.",
+      img: "/media/videos/camara.mp4",
+      link: "/Camara",
+      icon: <FaVideo />,
+      badge: "BEST SELLER"
     },
     {
       titulo: "Rastreo Vehicular",
-      img: "/rastre.mp4",
+      desc: "Localización precisa en tiempo real for flotas y vehículos particulares.",
+      img: "/media/videos/rastre.mp4",
       link: "/Rastreo1",
-      icon: <FaShieldAlt size={20} className="text-success me-2" />,
-      tipo: "router", // 👈 nueva página
+      icon: <FaShieldAlt />,
+      badge: "Gps"
     },
     {
-       titulo: "Energía Fotovoltaica",
-      img: "/fotovoltaica.mp4",
+      titulo: "Energía Fotovoltaica",
+      desc: "Paneles solares de alta eficiencia para un ahorro energético garantizado.",
+      img: "/media/videos/fotovoltaica.mp4",
       link: "/energia",
-      icon: <FaSun size={20} className="text-success me-2" />,
-      tipo: "router",
+      icon: <FaSun />,
+      badge: "ECO"
     },
     {
       titulo: "Antenas e Internet",
-      img: "/Antena.mp4",
+      desc: "Enlaces de alto desempeño y conectividad total en zonas rurales y urbanas.",
+      img: "/media/videos/antenaa.mp4",
       link: "/internet",
-      icon: <FaSun size={20} className="text-success me-2" />,
-      tipo: "router",
+      icon: <FaSignal />,
+      badge: "ROBUSTA"
     },
     {
-      titulo: "Acceso y Seguridad Física",
-      img: "/acceso.mp4",
+      titulo: "Acceso y Seguridad",
+      desc: "Control biométrico y barreras físicas para máxima protección de perímetros.",
+      img: "/media/videos/accesoo.mp4",
       link: "/Acceso",
-      icon: <FaSun size={20} className="text-success me-2" />,
-      tipo: "router",
+      icon: <FaLock />,
+      badge: "PREMIUM"
     },
   ];
 
   return (
     <div className="productos-page">
-      {/* Barra superior */}
       <NavbarComponent />
 
-      {/* HERO */}
-      <section
-        className="hero-productos"
-        style={{ backgroundImage: "url('/Fondo.png')" }}
-      >
-        <div className="overlay">
-          <div className="hero-content text-center" data-aos="zoom-in">
-            <h1 className="fw-bold text-white display-4 mb-3">
-              Nuestros <span className="highlight">Productos</span>
-            </h1>
-            <p className="text-light fs-5 mb-4">
-              Innovación en seguridad, energía y conectividad para tu negocio y hogar.
-            </p>
-          </div>
+      {/* 🚀 Hero Section */}
+      <section className="hero-catalog">
+        <div className="catalog-overlay-glass">
+          <Container>
+            <div className="text-center hero-content-wrap">
+              <h6 className="badge-premium mb-3" data-aos="fade-down">SOLUCIONES TECNOLÓGICAS</h6>
+              <h1 className="display-3 fw-extrabold text-white mb-4" data-aos="fade-up">
+                Catálogo de <span>Productos</span>
+              </h1>
+              <p className="lead text-white-50 mx-auto" data-aos="fade-up" data-aos-delay="200" style={{ maxWidth: "800px" }}>
+                Explora nuestra selección premium de equipos y sistemas diseñados para llevar la seguridad, energía y conectividad de tu proyecto al siguiente nivel.
+              </p>
+            </div>
+          </Container>
         </div>
       </section>
 
-      {/* Grid de categorías */}
-      <section className="bg-grid">
-        <Container className="py-5">
-          <h2
-            className="text-center fw-bold mb-2 text-success"
-            data-aos="fade-up"
-          >
-            Categorías principales
-          </h2>
-          <p
-            className="text-center text-muted mb-5"
-            data-aos="fade-up"
-            data-aos-delay="50"
-          >
-            Soluciones profesionales en seguridad, energía y conectividad.
-          </p>
+      {/* 🛠 Products Grid Section */}
+      <section className="catalog-grid-section py-5">
+        <Container className="py-lg-5">
+          <div className="text-center mb-5 pb-3">
+            <h2 className="section-title text-white fw-bold" data-aos="fade-up">
+              Nuestras <span>Categorías</span>
+            </h2>
+            <div className="divider-glow mx-auto"></div>
+          </div>
 
-          <Row>
+          <Row className="g-5 justify-content-center">
             {categorias.map((cat, idx) => (
-              <Col lg={4} md={6} className="mb-4" key={idx} data-aos="zoom-in">
-                <div className="gradient-frame h-100">
-                  <Card className="custom-card h-100 border-0">
-                    <div className="card-img-wrap">
-                      {/* Si es video, se muestra video, si no, imagen */}
-                      {cat.img.endsWith(".mp4") ? (
-                        <video
-                          className="custom-img"
-                          src={cat.img}
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                        />
-                      ) : (
-                        <Card.Img
-                          variant="top"
-                          src={cat.img}
-                          alt={cat.titulo}
-                          className="custom-img"
-                        />
-                      )}
-
-                      {/* Etiqueta superior */}
-                      <span className="chip">CerdycomJF</span>
+              <Col lg={4} md={6} key={idx} data-aos="fade-up" data-aos-delay={idx * 100}>
+                <Card className="product-card-premium h-100">
+                  <div className="catalog-image-wrapper">
+                    {cat.img.endsWith(".mp4") ? (
+                      <video
+                        className="catalog-video"
+                        src={cat.img}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      />
+                    ) : (
+                      <img src={cat.img} alt={cat.titulo} className="catalog-img" />
+                    )}
+                    <div className="catalog-overlay">
+                      <div className="catalog-badge-top">{cat.badge}</div>
+                      <div className="catalog-icon-badge">{cat.icon}</div>
                     </div>
-
-                    <Card.Body className="d-flex flex-column">
-                      <Card.Title className="fw-bold d-flex align-items-center mb-2">
-                        {cat.icon} {cat.titulo}
-                      </Card.Title>
-
-                      <Card.Text className="text-muted small">
-                        Calidad profesional, instalación certificada y soporte
-                        especializado.
-                      </Card.Text>
-
-                      <div className="mt-auto">
-                        {cat.tipo === "router" ? (
-                          <Link
-                            to={cat.link}
-                            className="btn btn-success w-100 fw-semibold btn-modern"
-                          >
-                            Ver más
-                          </Link>
-                        ) : (
-                          <Button
-                            variant="success"
-                            className="w-100 fw-semibold btn-modern"
-                            href={cat.link}
-                          >
-                            Ver más
-                          </Button>
-                        )}
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </div>
+                  </div>
+                  <Card.Body className="p-4 d-flex flex-column">
+                    <h4 className="text-white fw-bold mb-3">{cat.titulo}</h4>
+                    <p className="text-white-50 mb-4 flex-grow-1 small">
+                      {cat.desc}
+                    </p>
+                    <Link to={cat.link} className="catalog-action-btn">
+                      <span>Ver Catálogo</span>
+                      <FaArrowRight className="ms-2" />
+                    </Link>
+                  </Card.Body>
+                  <div className="card-bottom-glow"></div>
+                </Card>
               </Col>
             ))}
           </Row>
         </Container>
       </section>
 
-      {/* Pie de página */}
       <Footer />
 
-      {/* Estilos */}
       <style>{`
-        /* HERO */
-        .hero-productos {
+        .productos-page {
+          background: url('/media/ui/Fondo.webp') center/cover no-repeat fixed;
+          color: #fff;
+          min-height: 100vh;
+        }
+
+        .hero-catalog {
           position: relative;
-          background-size: cover;
-          background-position: center;
-          height: 65vh;
+          min-height: 50vh;
           display: flex;
           align-items: center;
-          justify-content: center;
-          overflow: hidden;
         }
-        .hero-productos .overlay {
-          background: linear-gradient(
-            rgba(0, 0, 0, 0.6), 
-            rgba(0, 0, 0, 0.6)
-          );
+
+        .catalog-overlay-glass {
           width: 100%;
-          height: 100%;
+          min-height: 50vh;
           display: flex;
           align-items: center;
-          justify-content: center;
-          padding: 0 20px;
+          padding: 80px 0;
+          background: linear-gradient(0deg, rgba(5, 5, 5, 0.7) 0%, rgba(5, 5, 5, 0.2) 100%);
         }
-        .hero-content h1 {
-          font-size: 3.5rem;
-          line-height: 1.2;
-          text-shadow: 0 4px 16px rgba(0,0,0,0.6);
-        }
-        .hero-content .highlight {
+
+        .badge-premium {
+          display: inline-block;
+          background: rgba(76, 175, 80, 0.1);
           color: #4CAF50;
-          text-shadow: 0 0 10px rgba(76,175,80,0.7);
-        }
-        .hero-content p {
-          max-width: 700px;
-          margin: 0 auto;
-        }
-
-        /* SECCIÓN GRID */
-        .bg-grid {
-          background:
-            radial-gradient(circle at 20% 20%, rgba(76, 175, 80, 0.06), transparent 40%),
-            radial-gradient(circle at 80% 0%, rgba(27, 94, 32, 0.05), transparent 45%),
-            linear-gradient(180deg, #ffffff 0%, #f7f9f7 100%);
+          padding: 8px 20px;
+          border-radius: 50px;
+          font-weight: 800;
+          font-size: 0.7rem;
+          letter-spacing: 2px;
+          border: 1px solid rgba(76, 175, 80, 0.2);
         }
 
-        .gradient-frame {
-          padding: 1px;
-          border-radius: 18px;
-          background: linear-gradient(135deg, #4CAF50 0%, rgba(76,175,80,0.15) 35%, rgba(27,94,32,0.25) 100%);
-          transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-        .gradient-frame:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 16px 32px rgba(0,0,0,0.15);
+        .fw-extrabold { font-weight: 800; }
+
+        .display-3 span {
+          color: #4CAF50;
+          text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
         }
 
-        .custom-card {
-          border-radius: 17px;
-          overflow: hidden;
-          background: rgba(255,255,255,0.92);
-          backdrop-filter: blur(6px);
-        }
-
-        .card-img-wrap {
+        .catalog-grid-section {
           position: relative;
+          background: linear-gradient(180deg, rgba(5, 5, 5, 0.4) 0%, rgba(10, 10, 10, 0.1) 100%);
+          backdrop-filter: blur(15px);
+        }
+
+        .section-title span { color: #4CAF50; }
+
+        .divider-glow {
+          width: 80px;
+          height: 4px;
+          background: #4CAF50;
+          border-radius: 10px;
+          margin-top: 15px;
+          box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
+        }
+
+        .product-card-premium {
+          background: rgba(255, 255, 255, 0.12) !important;
+          border: 1px solid rgba(255, 255, 255, 0.15) !important;
+          border-radius: 30px !important;
+          backdrop-filter: blur(15px);
+          transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
           overflow: hidden;
+          position: relative;
+        }
+
+        .product-card-premium:hover {
+          transform: translateY(-15px);
+          background: rgba(255, 255, 255, 0.07) !important;
+          border-color: rgba(76, 175, 80, 0.5) !important;
+          box-shadow: 0 30px 60px rgba(0,0,0,0.7);
+        }
+
+        .catalog-image-wrapper {
+          position: relative;
           height: 220px;
+          overflow: hidden;
         }
-        .custom-img {
-          height: 100%;
+
+        .catalog-video, .catalog-img {
           width: 100%;
+          height: 100%;
           object-fit: cover;
-          transition: transform 0.5s ease;
-        }
-        .gradient-frame:hover .custom-img {
-          transform: scale(1.08);
+          transition: transform 0.8s ease;
         }
 
-        .chip {
+        .product-card-premium:hover .catalog-video,
+        .product-card-premium:hover .catalog-img {
+          transform: scale(1.15);
+        }
+
+        .catalog-overlay {
           position: absolute;
-          top: 14px;
-          left: 14px;
-          background: rgba(255,255,255,0.9);
-          color: #1B5E20;
-          font-weight: 600;
-          font-size: 0.75rem;
-          padding: 6px 10px;
-          border-radius: 999px;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+          inset: 0;
+          background: linear-gradient(0deg, rgba(0,0,0,0.3) 0%, transparent 100%);
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
         }
 
-        .btn-modern {
-          border-radius: 999px;
-          padding: 10px 14px;
-          transition: transform 0.2s ease, box-shadow 0.25s ease;
+        .catalog-badge-top {
+          background: rgba(10, 10, 10, 0.7);
+          backdrop-filter: blur(5px);
+          color: #fff;
+          font-size: 0.65rem;
+          font-weight: 800;
+          padding: 6px 14px;
+          border-radius: 50px;
+          border: 1px solid rgba(255,255,255,0.1);
+          letter-spacing: 1.5px;
         }
-        .btn-modern:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 18px rgba(76, 175, 80, 0.45);
+
+        .catalog-icon-badge {
+          width: 50px;
+          height: 50px;
+          background: #4CAF50;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 15px;
+          font-size: 1.4rem;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+          transition: 0.4s;
+        }
+
+        .product-card-premium:hover .catalog-icon-badge {
+          transform: scale(1.1) rotate(5deg);
+          box-shadow: 0 0 25px rgba(76, 175, 80, 0.6);
+        }
+
+        .catalog-action-btn {
+          background: rgba(255,255,255,0.05);
+          color: #fff;
+          text-decoration: none;
+          padding: 14px;
+          border-radius: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 700;
+          transition: all 0.3s ease;
+          border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .catalog-action-btn:hover {
+          background: #4CAF50;
+          color: #fff;
+          border-color: #4CAF50;
+          box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+        }
+
+        .card-bottom-glow {
+          position: absolute;
+          bottom: -50px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100px;
+          height: 100px;
+          background: #4CAF50;
+          filter: blur(50px);
+          opacity: 0;
+          transition: 0.5s;
+          pointer-events: none;
+        }
+
+        .product-card-premium:hover .card-bottom-glow {
+          opacity: 0.15;
+        }
+
+        @media (max-width: 991px) {
+          .hero-catalog { height: auto; }
+          .hero-catalog h1 { font-size: 2.5rem; }
+          .catalog-image-wrapper { height: 180px; }
         }
       `}</style>
     </div>

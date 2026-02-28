@@ -1,159 +1,274 @@
-// src/pages/Rastreo.jsx
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { FaRoute, FaMapMarkedAlt, FaHistory, FaSatelliteDish, FaWhatsapp, FaCheckCircle, FaMobileAlt, FaChartLine } from "react-icons/fa";
 
 export default function Rastreo() {
+  const benefits = [
+    {
+      icon: <FaMapMarkedAlt />,
+      title: "Localización Real",
+      desc: "Seguimiento preciso mediante GPS y plataforma avanzada en tiempo real 24/7."
+    },
+    {
+      icon: <FaMobileAlt />,
+      title: "Control Móvil",
+      desc: "Monitorea tu vehículo o flota desde cualquier smartphone con nuestra App dedicada."
+    },
+    {
+      icon: <FaHistory />,
+      title: "Historial Detallado",
+      desc: "Accede a reportes minuciosos de rutas, paradas y tiempos de los últimos meses."
+    },
+    {
+      icon: <FaChartLine />,
+      title: "Alertas Inteligentes",
+      desc: "Notificaciones inmediatas por exceso de velocidad, pánico o desvío de rutas."
+    }
+  ];
 
+  const commitments = [
+    "Rastreo confiable y con precisión satelital.",
+    "Soporte técnico permanente para tu tranquilidad.",
+    "Soluciones a medida para empresas y particulares.",
+    "Innovación constante en hardware y software GPS."
+  ];
 
   return (
     <div className="rastreo-page">
       <NavbarComponent />
 
-      {/* HERO Rastreo Vehicular */}
-      <section
-        className="hero-rastreo"
-        style={{
-          backgroundImage: "url('/Fondo.png')",
-        }}
-      >
-        <div className="overlay">
-          <div
-            className="hero-content text-center text-white px-3"
-            style={{ maxWidth: "700px" }}
-          >
-            <h1
-              className="fw-bold mb-4 display-4"
-              data-aos="fade-up"
-              data-aos-delay="0"
-            >
-              Rastreo <span className="highlight">Vehicular</span>
-            </h1>
-            <p
-              className="lead"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              En <strong>CERDYCOM JF</strong> entendemos que la seguridad en la
-              movilidad es tan importante como en el hogar o la empresa. Con
-              nuestras soluciones de <strong>rastreo vehicular satelital</strong>, tendrás control total de tu flota o vehículo particular, garantizando protección y localización en tiempo real.
-            </p>
-          </div>
+      {/* 🚀 Hero Section */}
+      <section className="hero-detail">
+        <div className="hero-overlay-glass">
+          <Container>
+            <div className="hero-text-wrapper text-center">
+              <h6 className="badge-premium mb-3" data-aos="fade-down">RASTREO SATELITAL</h6>
+              <h1 className="display-4 fw-bold text-white mb-4" data-aos="fade-up">
+                Tu Vehículo Siempre <span>Bajo Control</span>
+              </h1>
+              <p className="hero-desc text-white-50 mx-auto" data-aos="fade-up" data-aos-delay="200" style={{ maxWidth: "800px" }}>
+                En <strong>CERDYCOM JF</strong> brindamos la máxima seguridad en movilidad. Control total, localización exacta y respuesta rápida para tu tranquilidad.
+              </p>
+            </div>
+          </Container>
         </div>
       </section>
 
-      {/* CONTENIDO */}
-      <section className="py-5 bg-light">
-        <div className="container">
-          <h2 className="fw-bold text-success mb-4" data-aos="fade-up">
-            ¿Cómo brindamos tranquilidad?
-          </h2>
-          <ul className="custom-list mb-4">
-            <li data-aos="fade-up">Localización en tiempo real mediante GPS y plataformas en línea.</li>
-            <li data-aos="fade-up">Monitoreo 24/7 desde cualquier dispositivo conectado a internet.</li>
-            <li data-aos="fade-up">Alertas inteligentes por exceso de velocidad, desvío de ruta o zonas definidas.</li>
-            <li data-aos="fade-up">Historial de recorridos y reportes detallados para análisis y control.</li>
-            <li data-aos="fade-up">Optimización de rutas para mayor eficiencia en transporte y logística.</li>
-          </ul>
-
-          <h2 className="fw-bold text-success mb-4" data-aos="fade-up">
-            Nuestro compromiso
-          </h2>
-          <ul className="custom-checklist text-success fw-semibold">
-            <li data-aos="fade-up">Ofrecer un rastreo confiable y preciso en todo momento.</li>
-            <li data-aos="fade-up">Brindar soporte técnico permanente para garantizar tu tranquilidad.</li>
-            <li data-aos="fade-up">Diseñar soluciones adaptadas a particulares, empresas y flotas corporativas.</li>
-            <li data-aos="fade-up">Integrar innovación y nuevas tecnologías para un control inteligente.</li>
-          </ul>
-
-          {/* ✅ Botón WhatsApp */}
-          <div className="text-center mt-5" data-aos="zoom-in">
-            <Button
-              href="https://wa.me/573016465632?text=Hola%20quiero%20información%20sobre%20Rastreo%20Vehicular"
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="success"
-              size="lg"
-            >
-              Solicita aquí
-            </Button>
+      {/* 🛠 Solutions Section */}
+      <section className="solutions-section py-5">
+        <div className="bg-glow-right"></div>
+        <Container className="py-lg-5">
+          <div className="text-center mb-5 pb-3">
+            <h2 className="section-title text-white fw-bold h1" data-aos="fade-up">
+              ¿Cómo brindamos <span>Seguridad?</span>
+            </h2>
+            <div className="divider-glow mx-auto"></div>
           </div>
-        </div>
+
+          <Row className="g-4">
+            {benefits.map((item, idx) => (
+              <Col lg={3} md={6} key={idx} data-aos="fade-up" data-aos-delay={idx * 100}>
+                <Card className="glass-benefit-card h-100">
+                  <div className="benefit-icon-box">{item.icon}</div>
+                  <Card.Body className="p-0">
+                    <h5 className="text-white fw-bold mb-3">{item.title}</h5>
+                    <p className="text-white-50 mb-0 small">{item.desc}</p>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+
+          <Row className="align-items-center g-5 mt-5">
+            <Col lg={6} data-aos="fade-right">
+              <div className="commitment-card p-4">
+                <h3 className="text-white fw-bold mb-4 h2">Logística y <span>Protección</span></h3>
+                <div className="commitment-list">
+                  {commitments.map((text, i) => (
+                    <div className="commitment-item" key={i}>
+                      <FaCheckCircle className="check-icon" />
+                      <span>{text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Col>
+            <Col lg={6} data-aos="fade-left">
+              <div className="cta-box-glass p-5 text-center">
+                <FaSatelliteDish className="cta-icon mb-4" />
+                <h4 className="text-white fw-bold mb-3">¿Necesitas rastreo hoy mismo?</h4>
+                <p className="text-white-50 mb-4">Planes flexibles para motos, autos y flotas de transporte masivo.</p>
+                <Button
+                  href="https://wa.me/573016465632?text=Hola!%20Quiero%20información%20sobre%20Rastreo%20Vehicular."
+                  target="_blank"
+                  className="whatsapp-btn-modern glow-pulse"
+                >
+                  <FaWhatsapp className="me-2" /> Consultar Planes GPS
+                </Button>
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </section>
 
       <Footer />
 
       <style>{`
-        .hero-rastreo {
+        .rastreo-page {
+          background: url('/media/ui/Fondo.webp') center/cover no-repeat fixed;
+          color: #fff;
+          min-height: 100vh;
+        }
+
+        .hero-detail {
           position: relative;
-          background-size: cover;
-          background-position: center;
-          min-height: 70vh;
+          min-height: 60vh;
           display: flex;
           align-items: center;
-          justify-content: center;
         }
-        .hero-rastreo .overlay {
-          background: rgba(0,0,0,0.55);
+
+        .hero-overlay-glass {
           width: 100%;
-          height: 100%;
+          min-height: 60vh;
           display: flex;
           align-items: center;
-          justify-content: center;
-          text-align: center;
-        }
-        .hero-content {
-          max-width: 800px;
+          background: linear-gradient(0deg, rgba(5, 5, 5, 0.7) 0%, rgba(5, 5, 5, 0.3) 100%);
         }
 
-        /* Título principal */
-        .hero-content h1 {
-          font-size: 3.5rem;
-          line-height: 1.2;
-          text-shadow: 0 4px 16px rgba(0,0,0,0.6);
-        }
-        .hero-content .highlight {
-          color: #28a745; /* Verde */
-          text-shadow: 0 0 12px rgba(40,167,69,0.7);
+        .hero-text-wrapper {
+          position: relative;
+          z-index: 3;
+          width: 100%;
         }
 
-        h2 {
-          border-left: 5px solid #28a745;
-          padding-left: 15px;
+        .badge-premium {
+          display: inline-block;
+          background: rgba(76, 175, 80, 0.1);
+          color: #4CAF50;
+          padding: 8px 20px;
+          border-radius: 50px;
+          font-weight: 800;
+          font-size: 0.7rem;
+          letter-spacing: 2px;
+          border: 1px solid rgba(76, 175, 80, 0.2);
         }
-        .custom-list {
-          list-style: none;
-          padding-left: 0;
+
+        .hero-detail h1 span {
+          background: linear-gradient(90deg, #4CAF50, #81C784);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
-        .custom-list li {
+
+        .hero-desc {
+          font-size: 1.2rem;
+          line-height: 1.6;
+        }
+
+        .solutions-section {
           position: relative;
-          padding-left: 25px;
-          margin-bottom: 12px;
-          font-size: 1rem;
+          background: linear-gradient(180deg, rgba(10, 10, 10, 0.6) 0%, rgba(5, 5, 5, 0.4) 100%);
+          backdrop-filter: blur(15px);
         }
-        .custom-list li::before {
-          content: "◈";
+
+        .bg-glow-right {
           position: absolute;
-          left: 0;
-          color: #28a745;
-          font-size: 0.9rem;
+          top: -100px;
+          right: -50px;
+          width: 400px;
+          height: 400px;
+          background: radial-gradient(circle, rgba(76, 175, 80, 0.08) 0%, transparent 70%);
+          pointer-events: none;
         }
-        .custom-checklist {
-          list-style: none;
-          padding-left: 0;
+
+        .section-title span { color: #4CAF50; }
+
+        .divider-glow {
+          width: 60px;
+          height: 4px;
+          background: #4CAF50;
+          border-radius: 10px;
+          margin-top: 15px;
+          box-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
         }
-        .custom-checklist li {
-          position: relative;
-          padding-left: 28px;
-          margin-bottom: 12px;
-          font-size: 1rem;
+
+        .glass-benefit-card {
+          background: rgba(255, 255, 255, 0.03) !important;
+          border: 1px solid rgba(255, 255, 255, 0.08) !important;
+          border-radius: 20px !important;
+          transition: all 0.4s ease;
+          padding: 30px 25px;
+          backdrop-filter: blur(10px);
         }
-        .custom-checklist li::before {
-          content: "✔";
-          position: absolute;
-          left: 0;
-          color: #28a745;
-          font-weight: bold;
+
+        .glass-benefit-card:hover {
+          transform: translateY(-10px);
+          background: rgba(255, 255, 255, 0.08) !important;
+          border-color: rgba(76, 175, 80, 0.5) !important;
+          box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .benefit-icon-box {
+          font-size: 2.5rem;
+          color: #4CAF50;
+          margin-bottom: 20px;
+          transition: 0.3s;
+        }
+
+        .glass-benefit-card:hover .benefit-icon-box { transform: scale(1.1) rotate(5deg); }
+
+        .commitment-card h3 span { color: #4CAF50; }
+        .commitment-list { display: grid; gap: 18px; }
+        .commitment-item {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          font-size: 1.1rem;
+          color: rgba(255, 255, 255, 0.85);
+        }
+        .check-icon { color: #4CAF50; font-size: 1.3rem; flex-shrink: 0; }
+
+        .cta-box-glass {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 30px;
+          backdrop-filter: blur(10px);
+        }
+
+        .cta-icon { font-size: 3.5rem; color: #4CAF50; }
+
+        .whatsapp-btn-modern {
+          background: #25D366;
+          border: none;
+          padding: 16px 40px;
+          border-radius: 50px;
+          font-weight: 800;
+          font-size: 1.1rem;
+          color: #fff !important;
+          transition: all 0.3s ease;
+          display: inline-flex;
+          align-items: center;
+        }
+        .whatsapp-btn-modern:hover {
+          background: #128C7E;
+          transform: translateY(-3px) scale(1.02);
+          box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .glow-pulse {
+          animation: btnPulse 3s infinite;
+        }
+        @keyframes btnPulse {
+          0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+          70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        @media (max-width: 991px) {
+          .hero-detail { min-height: 50vh; }
+          .hero-overlay-glass { min-height: 50vh; }
+          .hero-detail h1 { font-size: 2.8rem; }
+          .cta-box-glass { padding: 40px 20px !important; }
         }
       `}</style>
     </div>

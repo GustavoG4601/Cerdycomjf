@@ -2,15 +2,15 @@ import { Container } from "react-bootstrap";
 
 export default function Allies() {
   const logos = [
-    "honey.png",
-    "alhua.png",
-    "han.png",
-    "hik.png",
-    "ez.png",
-    "tp.png",
-    "samsung.png",
-    "pana.png",
-    "sony.png",
+    "/media/brands/honey.webp",
+    "/media/brands/alhua.webp",
+    "/media/brands/han.webp",
+    "/media/brands/hik.webp",
+    "/media/brands/ez.webp",
+    "/media/brands/tp.webp",
+    "/media/brands/samsung.webp",
+    "/media/brands/pana.webp",
+    "/media/brands/sony.webp",
   ];
 
   return (
@@ -24,7 +24,7 @@ export default function Allies() {
           <div className="slide-track">
             {logos.concat(logos).map((logo, idx) => (
               <div className="slide" key={idx}>
-                <img src={logo} alt={`Aliado ${idx}`} />
+                <img src={logo} alt={`Aliado ${idx}`} loading="lazy" />
               </div>
             ))}
           </div>

@@ -3,6 +3,7 @@ import { Container, Card, Button, Modal } from "react-bootstrap";
 import { useState } from "react";
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
+import ImageWithSkeleton from "../components/ImageWithSkeleton";
 
 export default function Energia() {
   const [show, setShow] = useState(false);
@@ -17,7 +18,7 @@ export default function Energia() {
         "Ventilador de emergencia con batería recargable, radio FM y carga solar.",
       beneficios: [
         "Ventilador de 8 pulgadas con 2 velocidades",
-        "Batería recargable LiFePO4 3.2V / 5.8Ah",
+        "Batería recargable LiFePO4 3.2V // 5.8Ah",
         "Incluye radio FM, bocina Bluetooth y lector USB/TF",
         "16 luces LED nocturnas integradas",
         "Carga mediante puerto USB-C o panel solar",
@@ -25,7 +26,7 @@ export default function Energia() {
     },
     {
       nombre: "Kit Solar Portátil con Bombillos",
-      img: "bombillo.webp",
+      img: "/media/products/bombillo.webp",
       descripcion:
         "Sistema de iluminación solar portátil, ideal para hogares rurales y emergencias.",
       beneficios: [
@@ -41,7 +42,7 @@ export default function Energia() {
     // ⚡ Servicios generales de energía solar (los que ya tenías)
     {
       nombre: "Paneles Solares",
-      img: "panel1.png",
+      img: "/media/products/panel1.png",
       descripcion:
         "Paneles solares de alta eficiencia para hogares, negocios y proyectos personalizados.",
       beneficios: [
@@ -52,7 +53,7 @@ export default function Energia() {
     },
     {
       nombre: "Parques Solares",
-      img: "panel2.jpg",
+      img: "/media/products/panel2.jpg",
       descripcion:
         "Soluciones a gran escala con parques solares para empresas, fincas y comunidades.",
       beneficios: [
@@ -63,7 +64,7 @@ export default function Energia() {
     },
     {
       nombre: "Sistemas Solares para Copropiedades",
-      img: "panel3.jpg",
+      img: "/media/products/panel3.jpg",
       descripcion:
         "Energía solar compartida para edificios residenciales, conjuntos y condominios.",
       beneficios: [
@@ -74,7 +75,7 @@ export default function Energia() {
     },
     {
       nombre: "Eficiencia Energética",
-      img: "panel4.png",
+      img: "/media/products/panel4.png",
       descripcion:
         "Estudios y soluciones para optimizar el consumo energético en tu empresa u hogar.",
       beneficios: [
@@ -96,51 +97,61 @@ export default function Energia() {
     <div className="energia-page">
       <NavbarComponent />
 
-      {/* Hero con imagen de fondo */}
-      <section
-        className="hero-energia"
-        style={{ backgroundImage: "url('Fondo.png')" }}
-      >
-        <div className="overlay">
-          <h1 className="fw-bold text-white text-center display-5">
-            Energía Fotovoltaica
-          </h1>
-          <p className="text-light text-center mb-0">
-            Soluciones solares portátiles, residenciales e industriales
-          </p>
+      {/* Hero Section */}
+      <section className="hero-product-detail">
+        <div className="hero-overlay-glass">
+          <Container>
+            <div className="text-center" data-aos="fade-up">
+              <h1 className="display-3 fw-extrabold text-white mb-3">
+                Energía <span>Fotovoltaica</span>
+              </h1>
+              <p className="lead text-white-50 mx-auto" style={{ maxWidth: "700px" }}>
+                Aprovecha el poder del sol con soluciones portátiles, residenciales e industriales.
+                Sostenibilidad, ahorro y autonomía energética para tu futuro.
+              </p>
+            </div>
+          </Container>
         </div>
       </section>
 
-      {/* Listado de Energía */}
-      <Container className="py-5">
-        <h2 className="text-center fw-bold text-success mb-4">
-          Nuestros Productos y Servicios en Energía
-        </h2>
+      {/* Contenido con Glassmorphism */}
+      <Container className="py-5 product-container">
+        <div className="text-center mb-5">
+          <h2 className="section-title-premium" data-aos="fade-up">
+            Nuestros <span>Sistemas</span>
+          </h2>
+          <div className="divider-glow mx-auto" style={{ width: "80px", height: "4px", background: "#4CAF50", borderRadius: "10px", boxShadow: "0 0 15px rgba(76, 175, 80, 0.5)" }}></div>
+        </div>
 
-        <div className="row">
+        <div className="row g-4 justify-content-center">
           {energia.map((item, idx) => (
-            <div className="col-md-4 col-sm-6 mb-4" key={idx}>
-              <Card
-                className="h-100 shadow-sm energia-card"
-                onClick={() => handleShow(item)}
-                style={{ cursor: "pointer" }}
-              >
-                <Card.Img
-                  variant="top"
-                  src={item.img}
-                  alt={item.nombre}
-                  style={{ height: "220px", objectFit: "contain" }}
-                />
-                <Card.Body className="text-center">
-                  <Card.Title>{item.nombre}</Card.Title>
+            <div
+              className="col-lg-4 col-md-6"
+              key={idx}
+              data-aos="fade-up"
+              data-aos-delay={idx * 50}
+            >
+              <Card className="glass-card-product h-100" onClick={() => handleShow(item)}>
+                <div className="product-img-wrapper">
+                  <ImageWithSkeleton
+                    src={item.img}
+                    alt={item.nombre}
+                    className="product-img-zoom"
+                    loading="lazy"
+                  />
+                </div>
+                <Card.Body className="d-flex flex-column text-center p-4">
+                  <h5 className="text-white fw-bold mb-3">{item.nombre}</h5>
+                  <p className="text-white-50 small mb-4">{item.descripcion}</p>
+                  <Button variant="outline-success" className="mt-auto glass-btn">
+                    Ver Detalles
+                  </Button>
                 </Card.Body>
               </Card>
             </div>
           ))}
         </div>
       </Container>
-
-      <Footer />
 
       {/* Modal con detalles */}
       <Modal show={show} onHide={handleClose} centered size="lg">
@@ -150,22 +161,27 @@ export default function Energia() {
               <Modal.Title>{selected.nombre}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <img
-                src={selected.img}
-                alt={selected.nombre}
-                className="img-fluid mb-3 d-block mx-auto"
-                style={{ maxHeight: "250px", objectFit: "contain" }}
-              />
-              <p><strong>Descripción:</strong> {selected.descripcion}</p>
-              <p><strong>Beneficios:</strong></p>
-              <ul>
-                {selected.beneficios.map((b, i) => (
-                  <li key={i}>{b}</li>
-                ))}
-              </ul>
+              <div className="modal-img-container mb-4">
+                <img
+                  src={selected.img}
+                  alt={selected.nombre}
+                  className="img-fluid d-block mx-auto"
+                  style={{ maxHeight: "300px", objectFit: "contain" }}
+                  loading="lazy"
+                />
+              </div>
+              <div className="modal-details p-3">
+                <p className="mb-2"><strong className="text-success">Descripción:</strong> <span className="text-white-50">{selected.descripcion}</span></p>
+                <p className="mb-2"><strong className="text-success">Beneficios:</strong></p>
+                <ul className="text-white-50">
+                  {selected.beneficios.map((b, i) => (
+                    <li key={i}>{b}</li>
+                  ))}
+                </ul>
+              </div>
             </Modal.Body>
             <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
+              <Button variant="link" className="text-white-50 text-decoration-none" onClick={handleClose}>
                 Cerrar
               </Button>
               <Button
@@ -173,6 +189,7 @@ export default function Energia() {
                 as="a"
                 href={`https://wa.me/573016465632?text=Hola, estoy interesado en ${selected.nombre}`}
                 target="_blank"
+                className="px-4 py-2 fw-bold"
               >
                 Solicitar Información
               </Button>
@@ -181,37 +198,143 @@ export default function Energia() {
         )}
       </Modal>
 
-      {/* Estilos locales */}
+      <Footer />
+
       <style>{`
-        .hero-energia {
-          position: relative;
-          background-size: cover;
-          background-position: center;
-          min-height: 45vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .hero-energia .overlay {
-          background: rgba(0, 0, 0, 0.55);
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          padding: 20px;
+        .energia-page {
+          background: url('/media/ui/Fondo.webp') center/cover no-repeat fixed;
+          min-height: 100vh;
+          color: #fff;
         }
 
-        .energia-card {
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        .hero-product-detail {
+          min-height: 50vh;
+          display: flex;
+          align-items: center;
+          position: relative;
         }
-        .energia-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+        .hero-overlay-glass {
+          width: 100%;
+          min-height: 50vh;
+          display: flex;
+          align-items: center;
+          background: linear-gradient(0deg, rgba(5, 5, 5, 0.9) 0%, rgba(5, 5, 5, 0.4) 100%);
         }
-        .energia-card:active {
-          transform: scale(0.97);
+
+        .fw-extrabold { font-weight: 800; }
+
+        .display-3 span {
+          color: #4CAF50;
+          text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+        }
+
+        .section-title-premium {
+          color: #fff;
+          font-weight: 800;
+          font-size: 2.5rem;
+          margin-bottom: 15px;
+        }
+
+        .section-title-premium span {
+          color: #4CAF50;
+        }
+
+        .glass-card-product {
+          background: rgba(255, 255, 255, 0.08) !important;
+          border: 1px solid rgba(255, 255, 255, 0.15) !important;
+          border-radius: 30px !important;
+          backdrop-filter: blur(20px);
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          overflow: hidden;
+          cursor: pointer;
+        }
+
+        .glass-card-product:hover {
+          transform: translateY(-15px);
+          background: rgba(255, 255, 255, 0.12) !important;
+          border-color: rgba(76, 175, 80, 0.6) !important;
+          box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        }
+
+        .product-img-wrapper {
+          padding: 30px;
+          background: rgba(255, 255, 255, 0.05);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 280px;
+          position: relative;
+        }
+
+        .product-img-zoom {
+          max-height: 100%;
+          width: auto;
+          object-fit: contain;
+          transition: transform 0.6s ease;
+          filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+        }
+
+        .glass-card-product:hover .product-img-zoom {
+          transform: scale(1.1);
+        }
+
+        .glass-btn {
+          border-radius: 50px;
+          border-color: rgba(76, 175, 80, 0.5);
+          color: #fff;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+          transition: all 0.3s ease;
+        }
+
+        .glass-btn:hover {
+          background: #4CAF50;
+          border-color: #4CAF50;
+          box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+        }
+
+        .modal-content {
+          background: linear-gradient(135deg, rgba(8, 25, 12, 0.95), rgba(5, 10, 5, 0.98)) !important;
+          backdrop-filter: blur(30px);
+          border: 1px solid rgba(76, 175, 80, 0.2);
+          color: #fff;
+          border-radius: 40px;
+          overflow: hidden;
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.8), 0 0 20px rgba(76, 175, 80, 0.1);
+        }
+
+        .modal-header { 
+          border-bottom: 1px solid rgba(76, 175, 80, 0.1); 
+          padding: 25px 30px; 
+        }
+        
+        .modal-title { font-weight: 800; color: #fff; }
+        
+        .modal-body { padding: 35px; }
+        
+        .modal-footer { 
+          border-top: 1px solid rgba(76, 175, 80, 0.1); 
+          padding: 25px; 
+        }
+        
+        .modal-img-container {
+          background: rgba(255, 255, 255, 0.04);
+          border-radius: 30px;
+          padding: 30px;
+          border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .modal-details strong {
+          color: #4CAF50 !important;
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        @media (max-width: 991px) {
+          .section-title-premium { font-size: 2rem; }
+          .product-img-wrapper { height: 220px; }
         }
       `}</style>
     </div>

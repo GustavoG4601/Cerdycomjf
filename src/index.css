@@ -8,11 +8,32 @@
 }
 
 /* Estilos base */
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  width: 100%;
+  height: 100%;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  overflow: visible !important;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  position: relative;
+  background-color: #050505;
+  color: #fff;
   font-family: 'Montserrat', sans-serif !important;
-  background-color: #fff;
-  color: #000;
+}
+
+#root {
+  overflow: visible !important;
+  width: 100%;
+  height: auto;
 }
 
 /* Aplicar Montserrat a todos los elementos */
@@ -22,7 +43,12 @@ body {
 }
 
 /* Si quieres que los títulos tengan más peso */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
 

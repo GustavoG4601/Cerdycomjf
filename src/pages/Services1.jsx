@@ -1,135 +1,203 @@
 // src/pages/Services1.jsx
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Container, Row, Col } from "react-bootstrap";
 
 export default function Services1() {
-
-
   return (
     <div className="services1-page">
       <NavbarComponent />
 
       {/* Hero Seguridad Electrónica */}
-      <section
-        className="hero-section"
-        style={{
-          backgroundImage:
-            "url('https://sdmntprwestus2.oaiusercontent.com/files/00000000-e45c-61f8-8d20-13a777fd55e2/raw?se=2025-08-16T20%3A18%3A54Z&sp=r&sv=2024-08-04&sr=b&scid=3c976781-9984-5071-abd7-be45905aad48&skoid=7399a3a4-0259-4d43-bcd6-a56ceeb4c28b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-16T00%3A48%3A33Z&ske=2025-08-17T00%3A48%3A33Z&sks=b&skv=2024-08-04&sig=%2BYtY15iH7Ne3GcrWFYiwMT1siTu%2BnW7JmoRjQjozN7c%3D')",
-        }}
-      >
-        <div className="hero-overlay">
-          <div className="hero-content">
-            <h1
-              className="fw-bold text-white mb-4"
-              data-aos="fade-up"
-              data-aos-delay="0"
-            >
-              Seguridad Electrónica
-            </h1>
-            <p
-              className="text-white lead"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              En <strong>CERDYCOM JF</strong> entendemos que la seguridad es
-              sinónimo de tranquilidad. Por eso diseñamos soluciones
-              electrónicas y físicas que se adaptan a las necesidades de cada
-              cliente, brindando protección confiable para personas, bienes e
-              información.
-            </p>
-          </div>
+      <section className="hero-section">
+        <div className="hero-overlay-glass">
+          <Container>
+            <div className="hero-content" data-aos="fade-right">
+              <h6 className="badge-premium mb-3">COMPROMISO TOTAL</h6>
+              <h1 className="display-4 fw-bold text-white mb-4">
+                Seguridad <span>Electrónica</span>
+              </h1>
+              <p className="hero-desc text-white-50">
+                En <strong>CERDYCOM JF</strong> entendemos que la seguridad es
+                sinónimo de tranquilidad. Por eso diseñamos soluciones
+                electrónicas y físicas que se adaptan a las necesidades de cada
+                cliente, brindando protección confiable para personas, bienes e
+                información.
+              </p>
+            </div>
+          </Container>
         </div>
       </section>
 
       {/* Texto adicional debajo */}
-      <section className="info-section">
-        <div className="container">
-          <p data-aos="fade-up" data-aos-delay="200">
-            <strong>¿Cómo brindamos tranquilidad?</strong>
-          </p>
-          <ul>
-            <li data-aos="fade-up" data-aos-delay="300">
-              Sistemas integrales de seguridad que permiten supervisar,
-              controlar y proteger en todo momento.
-            </li>
-            <li data-aos="fade-up" data-aos-delay="400">
-              Monitoreo inteligente con tecnologías de última generación para
-              prevenir riesgos.
-            </li>
-            <li data-aos="fade-up" data-aos-delay="500">
-              Automatización e integración de dispositivos que generan
-              ambientes seguros y confortables.
-            </li>
-            <li data-aos="fade-up" data-aos-delay="600">
-              Asesoría especializada desde la planeación hasta la implementación
-              de proyectos de seguridad.
-            </li>
-            <li data-aos="fade-up" data-aos-delay="700">
-              Capacitación y entrenamiento para aprovechar al máximo cada
-              sistema.
-            </li>
-          </ul>
-
-          <p data-aos="fade-up" data-aos-delay="800">
-            <strong>Nuestro compromiso</strong>
-          </p>
-          <ul>
-            <li data-aos="fade-up" data-aos-delay="900">
-              Garantizar confianza en cada solución entregada.
-            </li>
-            <li data-aos="fade-up" data-aos-delay="1000">
-              Brindar soporte técnico permanente y oportuno.
-            </li>
-            <li data-aos="fade-up" data-aos-delay="1100">
-              Adaptar cada proyecto a las necesidades reales de tu entorno.
-            </li>
-            <li data-aos="fade-up" data-aos-delay="1200">
-              Innovar constantemente para ofrecer siempre la mejor tecnología.
-            </li>
-          </ul>
-
-          <p data-aos="fade-up" data-aos-delay="1300">
-            En pocas palabras: convertimos la seguridad en tranquilidad para ti,
-            tu familia y tu empresa.
-          </p>
-        </div>
+      <section className="info-section py-5">
+        <Container className="py-5">
+          <Row className="g-5">
+            <Col lg={7}>
+              <div className="glass-info-card p-5" data-aos="fade-up">
+                <h3 className="section-title text-white fw-bold mb-4">
+                  ¿Cómo brindamos <span>Tranquilidad?</span>
+                </h3>
+                <ul className="premium-list">
+                  <li data-aos="fade-up" data-aos-delay="100">
+                    <div className="list-dot"></div>
+                    Sistemas integrales de seguridad que permiten supervisar, controlar y proteger en todo momento.
+                  </li>
+                  <li data-aos="fade-up" data-aos-delay="200">
+                    <div className="list-dot"></div>
+                    Monitoreo inteligente con tecnologías de última generación para prevenir riesgos.
+                  </li>
+                  <li data-aos="fade-up" data-aos-delay="300">
+                    <div className="list-dot"></div>
+                    Automatización e integración de dispositivos que generan ambientes seguros y confortables.
+                  </li>
+                  <li data-aos="fade-up" data-aos-delay="400">
+                    <div className="list-dot"></div>
+                    Asesoría especializada desde la planeación hasta la implementación de proyectos de seguridad.
+                  </li>
+                  <li data-aos="fade-up" data-aos-delay="500">
+                    <div className="list-dot"></div>
+                    Capacitación y entrenamiento para aprovechar al máximo cada sistema.
+                  </li>
+                </ul>
+              </div>
+            </Col>
+            <Col lg={5}>
+              <div className="glass-info-card p-5 h-100" data-aos="fade-left">
+                <h3 className="section-title text-white fw-bold mb-4">
+                  Nuestro <span>Compromiso</span>
+                </h3>
+                <ul className="premium-list">
+                  <li data-aos="fade-up" data-aos-delay="600">
+                    <div className="list-dot bg-success"></div>
+                    Garantizar confianza en cada solución entregada.
+                  </li>
+                  <li data-aos="fade-up" data-aos-delay="700">
+                    <div className="list-dot bg-success"></div>
+                    Brindar soporte técnico permanente y oportuno.
+                  </li>
+                  <li data-aos="fade-up" data-aos-delay="800">
+                    <div className="list-dot bg-success"></div>
+                    Adaptar cada proyecto a las necesidades reales de tu entorno.
+                  </li>
+                  <li data-aos="fade-up" data-aos-delay="900">
+                    <div className="list-dot bg-success"></div>
+                    Innovar constantemente para ofrecer siempre la mejor tecnología.
+                  </li>
+                </ul>
+                <div className="mt-5 p-4 cta-mini-glass text-center">
+                  <p className="mb-0 text-white-50 small italic">
+                    "Convertimos la seguridad en tranquilidad para ti, tu familia y tu empresa."
+                  </p>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </section>
 
       <Footer />
 
       <style>{`
         .services1-page {
-          background: #f8f9fa;
+          background: url('/media/ui/Fondo.webp') center/cover no-repeat fixed;
+          min-height: 100vh;
         }
+
         .hero-section {
           position: relative;
-          background-size: cover;
-          background-position: right;
-          min-height: 70vh;
+          min-height: 60vh;
           display: flex;
           align-items: center;
         }
-        .hero-overlay {
-          background: rgba(0,0,0,0.55);
+
+        .hero-overlay-glass {
           width: 100%;
-          height: 100%;
+          min-height: 60vh;
           display: flex;
           align-items: center;
+          background: linear-gradient(0deg, rgba(5, 5, 5, 0.7) 0%, rgba(5, 5, 5, 0.3) 100%);
         }
+
         .hero-content {
-          max-width: 700px;
-          padding: 50px;
+          max-width: 800px;
         }
+
+        .display-4 span {
+          color: #4CAF50;
+        }
+
+        .hero-desc {
+          font-size: 1.25rem;
+          line-height: 1.6;
+          opacity: 0.9;
+        }
+
+        .badge-premium {
+          display: inline-block;
+          background: rgba(76, 175, 80, 0.1);
+          color: #4CAF50;
+          padding: 8px 20px;
+          border-radius: 50px;
+          font-weight: 800;
+          font-size: 0.7rem;
+          letter-spacing: 2px;
+          border: 1px solid rgba(76, 175, 80, 0.2);
+        }
+
         .info-section {
-          padding: 50px 20px;
-          background: white;
-          color: #333;
+          background: linear-gradient(180deg, rgba(10, 10, 10, 0.6) 0%, rgba(5, 5, 5, 0.4) 100%);
+          backdrop-filter: blur(15px);
         }
-        .info-section ul {
-          margin-left: 20px;
+
+        .glass-info-card {
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 40px;
+          backdrop-filter: blur(10px);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
-        .info-section li {
-          margin-bottom: 8px;
+
+        .section-title span {
+          color: #4CAF50;
+        }
+
+        .premium-list {
+          list-style: none;
+          padding: 0;
+        }
+
+        .premium-list li {
+          display: flex;
+          align-items: flex-start;
+          gap: 15px;
+          margin-bottom: 20px;
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 1.05rem;
+          line-height: 1.5;
+        }
+
+        .list-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #4CAF50;
+          margin-top: 8px;
+          flex-shrink: 0;
+          box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+        }
+
+        .cta-mini-glass {
+          background: rgba(0, 0, 0, 0.2);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          border-radius: 20px;
+        }
+
+        @media (max-width: 991px) {
+          .hero-section { min-height: 50vh; }
+          .hero-overlay-glass { min-height: 50vh; }
+          .display-4 { font-size: 2.5rem; }
+          .hero-content { padding: 30px 15px; }
         }
       `}</style>
     </div>

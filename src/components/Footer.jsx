@@ -18,88 +18,90 @@ export default function Footer() {
           {/* Logo */}
           <Col md={3} className="text-center text-md-start">
             <img
-              src="/logo.png"
+              src="/media/ui/logo.webp"
               alt="CerdycomJF"
               style={{ maxHeight: "80px", marginBottom: "15px" }}
             />
             <p className="small">
-              Innovación y seguridad para tu tranquilidad.  
+              Innovación y seguridad para tu tranquilidad.
               Soluciones en rastreo vehicular, energía fotovoltaica y más.
             </p>
           </Col>
 
           {/* Contacto */}
-<Col md={3} className="px-4 px-md-5">
-  <h5 className="fw-bold mb-3 text-white">Contáctanos</h5>
-  <p><FaPhone className="me-2 text-success" /> +57 3016465632</p>
-  <p><FaEnvelope className="me-2 text-success" /> ventas@cerdyconjf.com</p>
-  <p><FaMapMarkerAlt className="me-2 text-success" /> Cartagena, Colombia</p>
-</Col>
+          <Col md={3} className="px-4 px-md-5">
+            <h5 className="fw-bold mb-3 text-white">Contáctanos</h5>
+            <p><FaPhone className="me-2 text-success" /> +57 3016465632</p>
+            <p><FaEnvelope className="me-2 text-success" /> ventas@cerdyconjf.com</p>
+            <p><FaMapMarkerAlt className="me-2 text-success" /> Cartagena, Colombia</p>
+          </Col>
 
-{/* Redes sociales */}
-<Col md={3}>
-  <h5 className="fw-bold mb-3 text-white">Síguenos</h5>
-  <div className="d-flex gap-3 justify-content-center justify-content-md-start">
-    <a 
-      href="https://www.facebook.com/share/1K4E2ZNvN2/" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="social-icon"
-    >
-      <FaFacebook />
-    </a>
-    <a 
-      href="https://www.instagram.com/cerdycom?igsh=MWpodjgwbGxpYjUy" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="social-icon"
-    >
-      <FaInstagram />
-    </a>
-    <a 
-      href="https://wa.me/573016465632" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="social-icon"
-    >
-      <FaWhatsapp />
-    </a>
-    <a 
-      href="https://www.linkedin.com/company/cerdycomjf-s-a-s/about/?viewAsMember=true" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="social-icon"
-    >
-      <FaLinkedin />
-    </a>
-  </div>
-</Col>
+          {/* Redes sociales */}
+          <Col md={3}>
+            <h5 className="fw-bold mb-3 text-white">Síguenos</h5>
+            <div className="d-flex gap-3 justify-content-center justify-content-md-start">
+              <a
+                href="https://www.facebook.com/share/1K4E2ZNvN2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
+                <FaFacebook />
+              </a>
+              <a
+                href="https://www.instagram.com/cerdycom?igsh=MWpodjgwbGxpYjUy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://wa.me/573016465632"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
+                <FaWhatsapp />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/cerdycomjf-s-a-s/about/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
+          </Col>
 
 
           {/* Descarga nuestra app */}
           <Col md={3}>
             <h5 className="fw-bold mb-3 text-white">Descarga nuestra App</h5>
             <div className="d-flex flex-column gap-2">
-              <a 
-                href="https://play.google.com/store/apps/details?id=com.cerdycomjf.app" 
-                target="_blank" 
+              <a
+                href="https://play.google.com/store/apps/details?id=com.cerdycomjf.app"
+                target="_blank"
                 rel="noopener noreferrer"
               >
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1200px-Google_Play_Store_badge_EN.svg.png" 
-                  alt="Google Play" 
+                <img
+                  src="/media/brands/googleplay.webp"
+                  alt="Google Play"
                   style={{ maxHeight: "40px" }}
+                  loading="lazy"
                 />
               </a>
-              <a 
-                href="https://apps.apple.com/co/app/cerdycomjf-gps/id1621271265" 
-                target="_blank" 
+              <a
+                href="https://apps.apple.com/co/app/cerdycomjf-gps/id1621271265"
+                target="_blank"
                 rel="noopener noreferrer"
               >
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1280px-Download_on_the_App_Store_Badge.svg.png" 
-                  alt="App Store" 
+                <img
+                  src="/media/brands/appstore.webp"
+                  alt="App Store"
                   style={{ maxHeight: "40px" }}
+                  loading="lazy"
                 />
               </a>
             </div>
