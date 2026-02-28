@@ -2,6 +2,7 @@
   "name": "cerdycom",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@react-spring/web": "^10.0.1",
     "@testing-library/dom": "^10.4.1",
