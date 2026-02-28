@@ -1,7 +1,7 @@
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { FaShieldAlt, FaCctv, FaUserShield, FaHandshake, FaArrowRight, FaWhatsapp, FaCheckCircle, FaProjectDiagram, FaMicrochip } from "react-icons/fa";
+import { FaUserShield, FaHandshake, FaWhatsapp, FaCheckCircle, FaProjectDiagram, FaMicrochip } from "react-icons/fa";
 import { MdOutlineLiveTv } from "react-icons/md";
 
 export default function Seguridad() {

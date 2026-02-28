@@ -1,7 +1,7 @@
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { FaSolarPanel, FaLeaf, FaSun, FaLightbulb, FaWhatsapp, FaCheckCircle, FaChargingStation, FaGlobe } from "react-icons/fa";
+import { FaSolarPanel, FaSun, FaLightbulb, FaWhatsapp, FaCheckCircle, FaChargingStation, FaGlobe } from "react-icons/fa";
 
 export default function Solar() {
   const benefits = [

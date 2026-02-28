@@ -1,7 +1,7 @@
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { FaRoute, FaMapMarkedAlt, FaHistory, FaSatelliteDish, FaWhatsapp, FaCheckCircle, FaMobileAlt, FaChartLine } from "react-icons/fa";
+import { FaMapMarkedAlt, FaHistory, FaSatelliteDish, FaWhatsapp, FaCheckCircle, FaMobileAlt, FaChartLine } from "react-icons/fa";
 
 export default function Rastreo() {
   const benefits = [

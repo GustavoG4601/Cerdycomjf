@@ -1,7 +1,7 @@
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { FaUserTie, FaBroom, FaSeedling, FaSwimmingPool, FaWhatsapp, FaCheckCircle, FaBuilding, FaHandsHelping } from "react-icons/fa";
+import { FaUserTie, FaBroom, FaSeedling, FaSwimmingPool, FaWhatsapp, FaCheckCircle, FaHandsHelping } from "react-icons/fa";
 
 export default function Capacitacion() {
   const benefits = [

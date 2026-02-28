@@ -1,7 +1,7 @@
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { FaSatelliteDish, FaWifi, FaSignal, FaNetworkWired, FaWhatsapp, FaCheckCircle, FaProjectDiagram, FaGlobeAmericas } from "react-icons/fa";
+import { FaWifi, FaSignal, FaNetworkWired, FaWhatsapp, FaCheckCircle, FaProjectDiagram, FaGlobeAmericas } from "react-icons/fa";
 
 export default function Antenas() {
   const benefits = [

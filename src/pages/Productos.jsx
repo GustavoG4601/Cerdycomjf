@@ -1,8 +1,8 @@
 import NavbarComponent from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Card, Button, Container, Row, Col } from "react-bootstrap";
+import { Card, Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FaShieldAlt, FaSun, FaArrowRight, FaVideo, FaCogs, FaSignal, FaLock } from "react-icons/fa";
+import { FaShieldAlt, FaSun, FaArrowRight, FaVideo, FaSignal, FaLock } from "react-icons/fa";
 
 export default function Productos() {
   const categorias = [
