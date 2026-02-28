@@ -31,7 +31,7 @@ export default function Rastreo1() {
     },
     {
       nombre: "Plataforma de Rastreo Satelital",
-      img: "/media/products/gps3.jpg",
+      img: "/media/products/gps3.webp",
       descripcion: "Sistema profesional de gestión de flotas y rastreo global.",
       alcance: "Compatible con proveedores telemáticos a nivel mundial.",
       beneficios: [

@@ -165,8 +165,7 @@ export default function Productos() {
 
         .catalog-grid-section {
           position: relative;
-          background: linear-gradient(180deg, rgba(5, 5, 5, 0.4) 0%, rgba(10, 10, 10, 0.1) 100%);
-          backdrop-filter: blur(15px);
+          background: linear-gradient(180deg, rgba(5, 5, 5, 0.7) 0%, rgba(10, 10, 10, 0.4) 100%);
         }
 
         .section-title span { color: #4CAF50; }

@@ -13,7 +13,7 @@ export default function Energia() {
     // 🚀 Productos del catálogo
     {
       nombre: "Ventilador Solar Portátil con Luz LED",
-      img: "ventilador.webp",
+      img: "/media/products/Ventilador.webp",
       descripcion:
         "Ventilador de emergencia con batería recargable, radio FM y carga solar.",
       beneficios: [
@@ -42,7 +42,7 @@ export default function Energia() {
     // ⚡ Servicios generales de energía solar (los que ya tenías)
     {
       nombre: "Paneles Solares",
-      img: "/media/products/panel1.png",
+      img: "/media/products/panel1.webp",
       descripcion:
         "Paneles solares de alta eficiencia para hogares, negocios y proyectos personalizados.",
       beneficios: [
@@ -53,7 +53,7 @@ export default function Energia() {
     },
     {
       nombre: "Parques Solares",
-      img: "/media/products/panel2.jpg",
+      img: "/media/products/panel2.webp",
       descripcion:
         "Soluciones a gran escala con parques solares para empresas, fincas y comunidades.",
       beneficios: [
@@ -64,7 +64,7 @@ export default function Energia() {
     },
     {
       nombre: "Sistemas Solares para Copropiedades",
-      img: "/media/products/panel3.jpg",
+      img: "/media/products/panel3.webp",
       descripcion:
         "Energía solar compartida para edificios residenciales, conjuntos y condominios.",
       beneficios: [
@@ -75,7 +75,7 @@ export default function Energia() {
     },
     {
       nombre: "Eficiencia Energética",
-      img: "/media/products/panel4.png",
+      img: "/media/products/panel4.webp",
       descripcion:
         "Estudios y soluciones para optimizar el consumo energético en tu empresa u hogar.",
       beneficios: [

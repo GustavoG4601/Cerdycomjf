@@ -72,7 +72,7 @@ export default function Acceso() {
     },
     {
       nombre: "Talanqueras (vehiculares)",
-      img: "/media/products/iman5.jpg",
+      img: "/media/products/iman5.webp",
       descripcion:
         "Talanqueras automáticas para el control de acceso vehicular en parques, empresas y conjuntos.",
       alcance: "Operación 24/7 con bajo mantenimiento.",
@@ -96,7 +96,7 @@ export default function Acceso() {
     },
     {
       nombre: "Servicios de drones (vigilancia aérea)",
-      img: "/media/products/iman7.jpg",
+      img: "/media/products/iman7.webp",
       descripcion:
         "Monitoreo y vigilancia aérea mediante drones equipados con cámaras de alta resolución.",
       alcance: "Cobertura amplia en terrenos extensos y zonas de difícil acceso.",

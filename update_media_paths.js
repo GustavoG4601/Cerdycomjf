@@ -6,21 +6,21 @@ const srcDir = 'c:/Users/ACER/Desktop/cerdycom/src';
 const classification = {
     videos: [
         'accesoo.mp4', 'antenaa.mp4', 'camara.mp4', 'fotovoltaica.mp4',
-        'rastre.mp4', 'verde11.mp4', 'video.mp4'
+        'rastre.mp4', 'verde111.mp4', 'video.mp4'
     ],
     brands: [
         'honey.webp', 'alhua.webp', 'han.webp', 'hik.webp', 'ez.webp', 'ezmarca.webp',
         'tp.webp', 'samsung.webp', 'pana.webp', 'sony.webp', 'pol.webp'
     ],
     products: [
-        'antena1.webp', 'antena2.webp', 'antena3.jpg', 'antena4.webp', 'antena5.jpg',
-        'camara 1.webp', 'camara 2.webp', 'camara 3.png', 'camara 4.jpg',
-        'grabadora 2.png', 'grabadora.webp', 'gps1.webp', 'gps2.webp', 'gps3.jpg',
-        'iaman3.webp', 'iman.webp', 'iman2.webp', 'iman4.webp', 'iman5.jpg',
-        'iman6.webp', 'iman7.jpg', 'terminal.webp', 'bombillo.webp', 'Ventilador.webp',
-        'panel1.png', 'panel2.jpg', 'panel3.jpg', 'panel4.png', '1.png', '2.png', '3.png',
-        '4.png', 'Acceso.jpg', 'Alarma.jpg', 'Antena.png', 'Concertinas.jpg', 'Drone.jpg',
-        'Instalacion.jpg', 'Rastreo.jpg'
+        'antena1.webp', 'antena2.webp', 'antena3.webp', 'antena4.webp', 'antena5.webp',
+        'camara 1.webp', 'camara 2.webp', 'camara 3.webp', 'camara 4.webp',
+        'grabadora 2.webp', 'grabadora.webp', 'gps1.webp', 'gps2.webp', 'gps3.webp',
+        'iaman3.webp', 'iman.webp', 'iman2.webp', 'iman4.webp', 'iman5.webp',
+        'iman6.webp', 'iman7.webp', 'terminal.webp', 'bombillo.webp', 'Ventilador.webp',
+        'panel1.webp', 'panel2.webp', 'panel3.webp', 'panel4.webp', '1.png', '2.png', '3.png',
+        '4.png', 'Acceso.webp', 'Alarma.webp', 'Antena.png', 'Concertinas.webp', 'Drone.webp',
+        'Instalacion.webp', 'Rastreo.webp'
     ],
     ui: [
         'Fondo.webp', 'logo.webp', 'what.webp'

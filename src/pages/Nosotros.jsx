@@ -100,7 +100,7 @@ export default function Nosotros() {
           <div className="col-md-6" data-aos="zoom-in" data-aos-delay="200">
             <Card className="glass-card-info h-100 text-center">
               <Card.Body className="p-4 p-md-5">
-                <div className="icon-wrap-premium mb-3 mx-auto">🎯</div>
+                <div className="icon-wrap-premium mb-3 mx-auto">✅</div>
                 <h3 className="text-white fw-bold mb-3">Misión</h3>
                 <p className="text-white-50">
                   Brindar tranquilidad a través de soluciones robustas de seguridad electrónica y física,

@@ -37,7 +37,7 @@ export default function Internet() {
     },
     {
       nombre: "Conexión POE hasta 100mts",
-      img: "/media/products/antena3.jpg",
+      img: "/media/products/antena3.webp",
       descripcion:
         "Sistema de conexión mediante Power Over Ethernet para largas distancias sin pérdida de señal.",
       alcance: "Alcance garantizado hasta 100 metros.",
@@ -61,7 +61,7 @@ export default function Internet() {
     },
     {
       nombre: "Integración con routers",
-      img: "/media/products/antena5.jpg",
+      img: "/media/products/antena5.webp",
       descripcion:
         "Compatibilidad total con routers modernos para garantizar una experiencia de internet sin interrupciones.",
       alcance: "Compatible con cualquier router estándar.",

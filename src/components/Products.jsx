@@ -7,7 +7,7 @@ export default function Products() {
   const items = [
     {
       title: "Rastreo Satelital Vehicular",
-      img: "/media/products/Rastreo.jpg",
+      img: "/media/products/Rastreo.webp",
       icon: <FaCar />,
       color: "#4CAF50",
       id: "rastreo",
@@ -15,7 +15,7 @@ export default function Products() {
     },
     {
       title: "Grabación Digital",
-      img: "/media/products/Instalacion.jpg",
+      img: "/media/products/Instalacion.webp",
       icon: <FaVideo />,
       color: "#4CAF50",
       id: "videograbadora",
@@ -23,7 +23,7 @@ export default function Products() {
     },
     {
       title: "Control de Accesos",
-      img: "/media/products/Acceso.jpg",
+      img: "/media/products/Acceso.webp",
       icon: <MdSecurity />,
       color: "#4CAF50",
       id: "acceso",
@@ -31,7 +31,7 @@ export default function Products() {
     },
     {
       title: "Servicio de Drone",
-      img: "/media/products/Drone.jpg",
+      img: "/media/products/Drone.webp",
       icon: <FaWifi />,
       color: "#4CAF50",
       id: "drone",
@@ -39,7 +39,7 @@ export default function Products() {
     },
     {
       title: "Concertinas",
-      img: "/media/products/Concertinas.jpg",
+      img: "/media/products/Concertinas.webp",
       icon: <FaLock />,
       color: "#4CAF50",
       id: "concertinas",
@@ -47,7 +47,7 @@ export default function Products() {
     },
     {
       title: "Alarmas Contra Robo",
-      img: "/media/products/Alarma.jpg",
+      img: "/media/products/Alarma.webp",
       icon: <MdSecurity />,
       color: "#4CAF50",
       id: "alarmas",

@@ -31,7 +31,7 @@ export default function Camara() {
     },
     {
       nombre: "Cámara Bala TurboHD 5MP",
-      img: "/media/products/camara 3.png",
+      img: "/media/products/camara 3.webp",
       descripcion: "Cámara bala con luz blanca integrada para visión a color.",
       alcance: "Alcance de 40 metros con iluminación LED.",
       beneficios: [
@@ -42,7 +42,7 @@ export default function Camara() {
     },
     {
       nombre: "Cámara Domo PTZ TurboHD 1080P",
-      img: "/media/products/camara 4.jpg",
+      img: "/media/products/camara 4.webp",
       descripcion: "Cámara PTZ con zoom óptico y visión nocturna de largo alcance.",
       alcance: "Zoom óptico 15X y visión nocturna hasta 100 metros.",
       beneficios: [
@@ -64,7 +64,7 @@ export default function Camara() {
     },
     {
       nombre: "DVR 2MP Lite // 16 Canales",
-      img: "/media/products/grabadora 2.png",
+      img: "/media/products/grabadora 2.webp",
       descripcion: "Grabador de video digital con soporte para hasta 18 canales.",
       alcance: "16 canales TurboHD + 2 IP.",
       beneficios: [
